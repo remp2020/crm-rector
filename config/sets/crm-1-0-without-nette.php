@@ -9,7 +9,12 @@ return static function (\Symfony\Component\DependencyInjection\Loader\Configurat
      * Change params of ApiHandlerInterface::handle() and IdempotentHandlerInterface::idempotentHandle() methods
      * - https://github.com/remp2020/crm-api-module/commit/d03536184b3dbd568c23c886032df9cd87dddb46
      */
-    $services->set(\Crm\Utils\Rector\UpgradeToCrm1\ApiHandlerRector::class);
+    $services->set(\Crm\Utils\Rector\UpgradeToCrm1\ApiHandlerParametersRector::class);
+
+    /*
+     * Change JsonResponse($result) with setHttpCode($code) to new Tomaj\NetteApi\Response\JsonApiResponse($code, $result)
+     */
+    $services->set(\Crm\Utils\Rector\UpgradeToCrm1\ApiHandlerJsonResponseRector::class);
 
     /*
      * Add return types to ApiHandlerInterface::params() and ApiHandlerInterface::handle() methods

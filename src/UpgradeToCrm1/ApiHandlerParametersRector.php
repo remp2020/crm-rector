@@ -3,15 +3,11 @@ declare(strict_types=1);
 
 namespace Crm\Utils\Rector\UpgradeToCrm1;
 
-use PHPStan\Type\ObjectType;
-use PhpParser\Node;
-use PhpParser\Node\Stmt\ClassMethod;
 use Rector\Core\Rector\AbstractRector;
-use Rector\NodeTypeResolver\Node\AttributeKey;
 use Symplify\RuleDocGenerator\ValueObject\CodeSample\CodeSample;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 
-final class ApiHandlerRector extends AbstractRector
+final class ApiHandlerParametersRector extends AbstractRector
 {
     private \Rector\BetterPhpDocParser\PhpDocManipulator\PhpDocTagRemover $phpDocTagRemover;
 
@@ -20,22 +16,50 @@ final class ApiHandlerRector extends AbstractRector
         $this->phpDocTagRemover = $phpDocTagRemover;
     }
 
-    /**
-     * @return array<class-string<Node>>
-     */
-    public function getNodeTypes(): array
+    public function getRuleDefinition(): RuleDefinition
     {
-        return [ClassMethod::class];
+        return new RuleDefinition(
+            'Change signature of ApiHandlerInterface::handle() and IdempotentHandlerInterface::idempotentHandle()',
+            [
+                new CodeSample(
+                    // code before
+                    '
+                    public function handle(\Crm\ApiModule\Authorization\ApiAuthorizationInterface $authorization): ResponseInterface
+                    {
+                        $data = $authorization->getAuthorizedData();
+
+                        $params = $paramsProcessor->getValues();
+                    }
+                    ',
+                    // code after
+                    '
+                    public function handle(array $params): ResponseInterface
+                    {
+                        $authorization = $this->getAuthorization();
+                        $data = $authorization->getAuthorizedData();
+                    }
+                    '
+                ),
+            ]
+        );
     }
 
     /**
-     * @param ClassMethod $node
+     * @return array<class-string<\PhpParser\Node>>
      */
-    public function refactor(Node $node): ?Node
+    public function getNodeTypes(): array
+    {
+        return [\PhpParser\Node\Stmt\ClassMethod::class];
+    }
+
+    /**
+     * @param \PhpParser\Node\Stmt\ClassMethod $node
+     */
+    public function refactor(\PhpParser\Node $node): ?\PhpParser\Node
     {
         // process only API handlers
-        $parentNode = $node->getAttribute(AttributeKey::PARENT_NODE);
-        if (!$parentNode || !$this->isObjectType($parentNode, new ObjectType('Crm\ApiModule\Api\ApiHandlerInterface'))) {
+        $parentNode = $node->getAttribute(\Rector\NodeTypeResolver\Node\AttributeKey::PARENT_NODE);
+        if (!$parentNode || !$this->isObjectType($parentNode, new \PHPStan\Type\ObjectType('Crm\ApiModule\Api\ApiHandlerInterface'))) {
             return null;
         }
 
@@ -74,8 +98,8 @@ final class ApiHandlerRector extends AbstractRector
 
             // initialize $authorization variable
             if (!$authorizationAlreadyAssigned) {
-                $assign = new Node\Expr\Assign(
-                    new Node\Expr\Variable($authorizationVarName),
+                $assign = new \PhpParser\Node\Expr\Assign(
+                    new \PhpParser\Node\Expr\Variable($authorizationVarName),
                     $this->nodeFactory->createMethodCall('this', 'getAuthorization')
                 );
                 $assignStmt = new \PhpParser\Node\Stmt\Expression($assign);
@@ -96,33 +120,5 @@ final class ApiHandlerRector extends AbstractRector
         }
 
         return $node;
-    }
-
-    public function getRuleDefinition(): RuleDefinition
-    {
-        return new RuleDefinition(
-            'Change signature of method',
-            [
-                new CodeSample(
-                    // code before
-                    '
-                    public function handle(\Crm\ApiModule\Authorization\ApiAuthorizationInterface $authorization): ResponseInterface
-                    {
-                        $data = $authorization->getAuthorizedData();
-
-                        $params = $paramsProcessor->getValues();
-                    }
-                    ',
-                    // code after
-                    '
-                    public function handle(array $params): ResponseInterface
-                    {
-                        $authorization = $this->getAuthorization();
-                        $data = $authorization->getAuthorizedData();
-                    }
-                    '
-                ),
-            ]
-        );
     }
 }
