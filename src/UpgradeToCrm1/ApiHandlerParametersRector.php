@@ -69,8 +69,12 @@ final class ApiHandlerParametersRector extends AbstractRector
         }
 
         // remove old "ApiAuthorizationInterface $authorization"
-        // (there was only one parameter; position === 0)
-        if (isset($node->params[0]) && $node->params[0]->type->toCodeString() === '\Crm\ApiModule\Authorization\ApiAuthorizationInterface') {
+        // - there was only one parameter; position === 0
+        // - checking against \PhpParser\Node\Name type (if it was already refactored, it would be non-namespaced array -> \PhpParser\Node\Identifier
+        if (isset($node->params[0]) &&
+            $node->params[0]->type instanceof \PhpParser\Node\Name &&
+            $node->params[0]->type->toCodeString() === '\Crm\ApiModule\Authorization\ApiAuthorizationInterface'
+        ) {
             // store variable name for initialization
             $authorizationVarName = $node->params[0]->var->name ?? 'authorization';
             $this->nodeRemover->removeParam($node, 0);
