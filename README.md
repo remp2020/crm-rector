@@ -31,28 +31,31 @@ E.g. to update to CRM 1.0 it could look like this:
 
 declare(strict_types=1);
 
+use Crm\Utils\Rector\Set\CrmSetList;
+use Rector\Config\RectorConfig;
 use Rector\Core\Configuration\Option;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
+return static function (RectorConfig $rectorConfig): void {
+    $parameters = $rectorConfig->parameters();
 
     // paths to refactor
-    $parameters->set(Option::PATHS, [
+    $rectorConfig->paths([
         __DIR__ . '/app/custom-modules', // path to custom modules
          __DIR__ . '/composer.json', // root composer -> updates REMP CRM packages automatically
     ]);
 
     // optional settings to automatically import namespaces in changed files
-    $parameters->set(Option::AUTO_IMPORT_NAMES, true);
-    $parameters->set(Option::IMPORT_SHORT_CLASSES, false);
+    $rectorConfig->importNames();
+    $rectorConfig->disableImportShortClasses();
     $parameters->set(Option::APPLY_AUTO_IMPORT_NAMES_ON_CHANGED_FILES_ONLY, true);
 
     // set with CRM 1.0 changes; check README for list of sets
-    $containerConfigurator->import(\Crm\Utils\Rector\Set\CrmSetList::CRM_1_0);
+    $rectorConfig->sets([
+        CrmSetList::CRM_1_0,
+    ]);
 
     // set service if you want to run individual rule; check README for list of rules
-    // $services = $containerConfigurator->services();
+    // $services = $rectorConfig->services();
     // $services->set(\Crm\Utils\Rector\UpgradeToCrm1\ApiHandlerJsonResponseRector::class);
 };
 ```
