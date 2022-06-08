@@ -2,17 +2,15 @@
 
 declare (strict_types=1);
 
-return static function (\Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator $containerConfigurator) : void {
-    $services = $containerConfigurator->services();
-
+return static function (\Rector\Config\RectorConfig $rectorConfig) : void {
     /*
      * REMP CRM related changes
      */
-    $containerConfigurator->import(\Crm\Utils\Rector\Set\CrmSetList::CRM_1_0_WITHOUT_NETTE);
+    $rectorConfig->import(\Crm\Utils\Rector\Set\CrmSetList::CRM_1_0_WITHOUT_NETTE);
 
     /*
      * Nette 3 rules
      */
-    $containerConfigurator->import(\Rector\Nette\Set\NetteSetList::NETTE_30);
-    $containerConfigurator->import(\Rector\Nette\Set\NetteSetList::NETTE_31);
+    $rectorConfig->import(\Rector\Nette\Set\NetteSetList::NETTE_30);
+    $rectorConfig->import(\Rector\Nette\Set\NetteSetList::NETTE_31);
 };
