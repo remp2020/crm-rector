@@ -47,7 +47,6 @@ return static function (RectorConfig $rectorConfig): void {
     // optional settings to automatically import namespaces in changed files
     $rectorConfig->importNames();
     $rectorConfig->disableImportShortClasses();
-    $parameters->set(Option::APPLY_AUTO_IMPORT_NAMES_ON_CHANGED_FILES_ONLY, true);
 
     // set with CRM 1.0 changes; check README for list of sets
     $rectorConfig->sets([
@@ -96,3 +95,13 @@ Check also the [CRM 1.0 migration guide](https://github.com/remp2020/crm-applica
   - Changes all instances of `Crm\ApiModule\Api\JsonResponse` to `Tomaj\NetteApi\Response\JsonApiResponse`.
 
 _Note: Both these rules are part of sets `CRM_1_0` and `CRM_1_0_WITHOUT_NETTE`. These are created as individual rules because Rector's general rules were not sufficient. We recommend running whole set._
+
+### Transform to lazy event listeners
+
+#### Individual rules
+
+- [`\Crm\Utils\Rector\TransformToLazyEventListeners\TransformToLazyEventListeners`](src/TransformToLazyEventListeners/TransformToLazyEventListeners.php)
+  - Changes register events method to new lazy variant and removes `$this->getInstance()` call from all event registrations.
+
+
+
