@@ -86,6 +86,7 @@ Check also the [CRM 1.0 migration guide](https://github.com/remp2020/crm-applica
 - Set: `Crm\Utils\Rector\Set\CrmSetList::CRM_1_0` contains CRM changes and Nette rules (3.0, 3.1).
 - Set: `Crm\Utils\Rector\Set\CrmSetList::CRM_1_0_WITHOUT_NETTE` contains only CRM changes.
   - You can call Nette sets from your `rector.php` later.
+- Set: `Crm\Utils\Rector\Set\CrmSetList::NETTE_ANNOTATIONS_TO_ATTRIBUTES` contains transformation of PHPdoc-based annotations to PHP 8.0 attributes (available since Nette 3.0+).
 
 #### Individual rules
 
