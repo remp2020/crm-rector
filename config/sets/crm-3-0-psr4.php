@@ -122,6 +122,47 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/apple-appstore-module
+        'Crm\AppleAppstoreModule\Components\StopRecurrentPaymentInfoWidget'
+            => 'Crm\AppleAppstoreModule\Components\StopRecurrentPaymentInfoWidget\StopRecurrentPaymentInfoWidget',
+
+        'Crm\AppleAppstoreModule\Repository\AppleAppstoreOriginalTransactionsRepository'
+            => 'Crm\AppleAppstoreModule\Repositories\AppleAppstoreOriginalTransactionsRepository',
+        'Crm\AppleAppstoreModule\Repository\AppleAppstoreServerToServerNotificationLogRepository'
+            => 'Crm\AppleAppstoreModule\Repositories\AppleAppstoreServerToServerNotificationLogRepository',
+        'Crm\AppleAppstoreModule\Repository\AppleAppstoreSubscriptionTypesRepository'
+            => 'Crm\AppleAppstoreModule\Repositories\AppleAppstoreSubscriptionTypesRepository',
+        'Crm\AppleAppstoreModule\Repository\AppleAppstoreTransactionDeviceTokensRepository'
+            => 'Crm\AppleAppstoreModule\Repositories\AppleAppstoreTransactionDeviceTokensRepository',
+
+        'Crm\AppleAppstoreModule\Model\DoNotRetryException'
+            => 'Crm\AppleAppstoreModule\Models\ServerToServerNotificationProcessor\DoNotRetryException',
+        'Crm\AppleAppstoreModule\Model\ServerToServerNotificationDateTimesTrait'
+            => 'Crm\AppleAppstoreModule\Models\ServerToServerNotificationProcessor\ServerToServerNotificationDateTimesTrait',
+        'Crm\AppleAppstoreModule\Model\ServerToServerNotificationLatestReceiptTrait'
+            => 'Crm\AppleAppstoreModule\Models\ServerToServerNotificationProcessor\ServerToServerNotificationLatestReceiptTrait',
+        'Crm\AppleAppstoreModule\Model\ServerToServerNotificationPendingRenewalTrait'
+            => 'Crm\AppleAppstoreModule\Models\ServerToServerNotificationProcessor\ServerToServerNotificationPendingRenewalTrait',
+        'Crm\AppleAppstoreModule\Model\ServerToServerNotificationProcessor'
+            => 'Crm\AppleAppstoreModule\Models\ServerToServerNotificationProcessor\ServerToServerNotificationProcessor',
+        'Crm\AppleAppstoreModule\Model\ServerToServerNotificationProcessorInterface'
+            => 'Crm\AppleAppstoreModule\Models\ServerToServerNotificationProcessor\ServerToServerNotificationProcessorInterface',
+
+        'Crm\AppleAppstoreModule\User\AppleAppstoreUserDataProvider'
+            => 'Crm\AppleAppstoreModule\Models\User\AppleAppstoreUserDataProvider',
+
+        'Crm\AppleAppstoreModule\Model\AppleAppstoreValidatorFactory'
+            => 'Crm\AppleAppstoreModule\Models\AppleAppstoreValidatorFactory',
+        'Crm\AppleAppstoreModule\Model\Config'
+            => 'Crm\AppleAppstoreModule\Models\Config',
+        'Crm\AppleAppstoreModule\Model\LatestReceiptInfo'
+            => 'Crm\AppleAppstoreModule\Models\LatestReceiptInfo',
+        'Crm\AppleAppstoreModule\Model\PendingRenewalInfo'
+            => 'Crm\AppleAppstoreModule\Models\PendingRenewalInfo',
+        'Crm\AppleAppstoreModule\Model\ServerToServerNotification'
+            => 'Crm\AppleAppstoreModule\Models\ServerToServerNotification',
+        'Crm\AppleAppstoreModule\Model\UnifiedReceipt'
+            => 'Crm\AppleAppstoreModule\Models\UnifiedReceipt',
+
         // ********************************************************************
         // extensions/application-module
         // ********************************************************************
