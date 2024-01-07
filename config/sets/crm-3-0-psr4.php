@@ -10,6 +10,22 @@ return static function (RectorConfig $rectorConfig) : void {
     $rectorConfig->ruleWithConfiguration(RenameClassRector::class, [
         // ********************************************************************
         // extensions/admin-module
+        'Crm\AdminModule\Components\AdminMenuFactoryInterface'
+            => 'Crm\AdminModule\Components\AdminMenu\AdminMenuFactoryInterface',
+        'Crm\AdminModule\Components\AdminMenu'
+            => 'Crm\AdminModule\Components\AdminMenu\AdminMenu',
+
+        'Crm\AdminModule\DataProvider\ConfigFormDataProviderInterface'
+            => 'Crm\AdminModule\DataProviders\ConfigFormDataProviderInterface',
+
+        'Crm\AdminModule\Model\UniversalSearch'
+            => 'Crm\AdminModule\Models\UniversalSearch',
+        'Crm\AdminModule\Model\UniversalSearchDataProviderInterface'
+            => 'Crm\AdminModule\Models\UniversalSearchDataProviderInterface',
+
+        'Crm\AdminModule\Populator\AuditLogsPopulator'
+            => 'Crm\AdminModule\Populators\AuditLogsPopulator',
+
         // ********************************************************************
         // extensions/api-module
         // ********************************************************************
