@@ -104,5 +104,14 @@ _Note: Both these rules are part of sets `CRM_1_0` and `CRM_1_0_WITHOUT_NETTE`. 
 - [`\Crm\Utils\Rector\TransformToLazyEventListeners\TransformToLazyEventListeners`](src/TransformToLazyEventListeners/TransformToLazyEventListeners.php)
   - Changes register events method to new lazy variant and removes `$this->getInstance()` call from all event registrations.
 
+### Upgrade CRM v2.* -> CRM v3.0
 
+- Set: `Crm\Utils\Rector\Set\CrmSetList::CRM_3_0_PSR4` - contains namespace renames after class names / namespaces were changed to follow PSR4 standard.
 
+  Usage:
+
+  ```php
+  $rectorConfig->sets([
+      CrmSetList::CRM_3_0_PSR4,
+  ]);
+  ```
