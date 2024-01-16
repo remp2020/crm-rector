@@ -365,6 +365,11 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/muj-dum-module
+        'Crm\MujDumModule\Export\Send\ExportDataSource'
+            => 'Crm\MujDumModule\Models\Export\Send\ExportDataSource',
+        'Crm\MujDumModule\Export\Send\ExportView'
+            => 'Crm\MujDumModule\Models\Export\Send\ExportView',
+
         // ********************************************************************
         // extensions/multicash-module
         // ********************************************************************
