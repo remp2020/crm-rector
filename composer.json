@@ -1,13 +1,13 @@
 {
     "name": "remp/crm-rector",
     "description": "Rector rules for REMP/Crm",
-    "homepage": "https://remp2020.com",
+    "homepage": "https://remp2030.com",
     "type": "rector-extension",
     "config": {
         "sort-packages": true
     },
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "rector/rector": "^0.15.24"
     },
     "license": "MIT",
