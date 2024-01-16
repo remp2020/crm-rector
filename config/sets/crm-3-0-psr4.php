@@ -165,8 +165,33 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/application-module
+
         // ********************************************************************
         // extensions/coupon-module
+        'Crm\CouponModule\DataProvider\FilterUsersFormDataProvider'
+            => 'Crm\CouponModule\DataProviders\FilterUsersFormDataProvider',
+
+        'Crm\CouponModule\CannotAssignCouponException'
+            => 'Crm\CouponModule\Generator\CannotAssignCouponException',
+        'Crm\CouponModule\CouponAlreadyAssignedException'
+            => 'Crm\CouponModule\Generator\CouponAlreadyAssignedException',
+        'Crm\CouponModule\CouponAlreadyExistsException'
+            => 'Crm\CouponModule\Generator\CouponAlreadyExistsException',
+        'Crm\CouponModule\CouponExpiredException'
+            => 'Crm\CouponModule\Generator\CouponExpiredException',
+        'Crm\CouponModule\CouponGeneratorInterface'
+            => 'Crm\CouponModule\Generator\CouponGeneratorInterface',
+        'Crm\CouponModule\DefaultCouponGenerator'
+            => 'Crm\CouponModule\Generator\DefaultCouponGenerator',
+
+        'Crm\CouponModule\Repository\CouponCodesRepository'
+            => 'Crm\CouponModule\Repositories\CouponCodesRepository',
+        'Crm\CouponModule\Repository\CouponsRepository'
+            => 'Crm\CouponModule\Repositories\CouponsRepository',
+
+        'Crm\CouponModule\Repository\SubscriptionHasCouponCodeCriteria'
+            => 'Crm\CouponModule\Scenarios\SubscriptionHasCouponCodeCriteria',
+
         // ********************************************************************
         // extensions/dashboard-module
         // ********************************************************************
