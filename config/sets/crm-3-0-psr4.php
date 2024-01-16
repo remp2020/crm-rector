@@ -396,6 +396,21 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/onboarding-module
+        'Crm\OnboardingModule\Components\OnboardingProgress'
+            => 'Crm\OnboardingModule\Components\OnboardingProgress\OnboardingProgress',
+
+        'Crm\OnboardingModule\Repository\OnboardingGoalsRepository'
+            => 'Crm\OnboardingModule\Repositories\OnboardingGoalsRepository',
+        'Crm\OnboardingModule\Repository\UserOnboardingGoalsRepositoryDuplicateException'
+            => 'Crm\OnboardingModule\Repositories\UserOnboardingGoalsRepositoryDuplicateException',
+        'Crm\OnboardingModule\Repository\UserOnboardingGoalsRepository'
+            => 'Crm\OnboardingModule\Repositories\UserOnboardingGoalsRepository',
+
+        'Crm\OnboardingModule\Tests\OnboardingGoalCreatedAndUpdatedEventHandlerTest'
+            => 'Crm\OnboardingModule\Tests\Events\OnboardingGoalCreatedAndUpdatedEventHandlerTest',
+        'Crm\OnboardingModule\Tests\SegmentsSeederTest'
+            => 'Crm\OnboardingModule\Tests\Seeders\SegmentsSeederTest',
+
         // ********************************************************************
         // extensions/payments-module
         // ********************************************************************
