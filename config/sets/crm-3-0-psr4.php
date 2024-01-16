@@ -511,5 +511,10 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/wordpress-module
+        'Crm\WordpressModule\Model\ApiClient'
+            => 'Crm\WordpressModule\Models\ApiClient',
+
+        'Crm\WordpressModule\Repository\WordpressUsersRepository'
+            => 'Crm\WordpressModule\Repositories\WordpressUsersRepository',
     ]);
 };
