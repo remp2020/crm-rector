@@ -415,6 +415,43 @@ return static function (RectorConfig $rectorConfig) : void {
         // extensions/payments-module
         // ********************************************************************
         // extensions/print-module
+        'Crm\PrintModule\Export\ExportCriteria'
+            => 'Crm\PrintModule\Models\Export\ExportCriteria',
+        'Crm\PrintModule\Export\ExportEngine'
+            => 'Crm\PrintModule\Models\Export\ExportEngine',
+        'Crm\PrintModule\Export\FileSystem'
+            => 'Crm\PrintModule\Models\Export\FileSystem',
+        'Crm\PrintModule\Export\SourceInterface'
+            => 'Crm\PrintModule\Models\Export\SourceInterface',
+        'Crm\PrintModule\Export\ViewInterface'
+            => 'Crm\PrintModule\Models\Export\ViewInterface',
+
+        'Crm\PrintModule\Components\EnterAddressWidget'
+            => 'Crm\PrintModule\Components\EnterAddressWidget\EnterAddressWidget',
+        'Crm\PrintModule\Components\PaymentSuccessPrintWidget'
+            => 'Crm\PrintModule\Components\PaymentSuccessPrintWidget\PaymentSuccessPrintWidget',
+        'Crm\PrintModule\Components\RequestNotification'
+            => 'Crm\PrintModule\Components\RequestNotification\RequestNotification',
+        'Crm\PrintModule\Components\UserChangeAddressRequests'
+            => 'Crm\PrintModule\Components\UserChangeAddressRequests\UserChangeAddressRequests',
+        'Crm\PrintModule\Components\UserPrintExport'
+            => 'Crm\PrintModule\Components\UserPrintExport\UserPrintExport',
+
+        'Crm\PrintModule\Repository\PrintSubscriptionsRepository'
+            => 'Crm\PrintModule\Repositories\PrintSubscriptionsRepository',
+
+        'Crm\PrintModule\User\AddressChangeRequestsUserDataProvider'
+            => 'Crm\PrintModule\DataProviders\User\AddressChangeRequestsUserDataProvider',
+        'Crm\PrintModule\User\PrintAddressesUserDataProvider'
+            => 'Crm\PrintModule\DataProviders\User\PrintAddressesUserDataProvider',
+
+        'Crm\PrintModule\Populator\AddressChangeRequestsPopulator'
+            => 'Crm\PrintModule\Populators\AddressChangeRequestsPopulator',
+        'Crm\PrintModule\Populator\AddressesPopulator'
+            => 'Crm\PrintModule\Populators\AddressesPopulator',
+        'Crm\PrintModule\Populator\PrintSubscriptionsPopulator'
+            => 'Crm\PrintModule\Populators\PrintSubscriptionsPopulator',
+
         // ********************************************************************
         // extensions/privatbankar-module
         // ********************************************************************
