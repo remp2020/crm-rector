@@ -349,6 +349,20 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/mobiletech-module
+        'Crm\MobiletechModule\DataProvider\SubscriptionTypeFormProvider'
+            => 'Crm\MobiletechModule\DataProviders\SubscriptionTypeFormProvider',
+
+        'Crm\MobiletechModule\Repository\MobiletechAlreadyExistsException'
+            => 'Crm\MobiletechModule\Repositories\MobiletechAlreadyExistsException',
+        'Crm\MobiletechModule\Repository\MobiletechInboundMessagesRepository'
+            => 'Crm\MobiletechModule\Repositories\MobiletechInboundMessagesRepository',
+        'Crm\MobiletechModule\Repository\MobiletechOutboundMessagesRepository'
+            => 'Crm\MobiletechModule\Repositories\MobiletechOutboundMessagesRepository',
+        'Crm\MobiletechModule\Repository\MobiletechPhoneNumbersRepository'
+            => 'Crm\MobiletechModule\Repositories\MobiletechPhoneNumbersRepository',
+        'Crm\MobiletechModule\Repository\MobiletechTemplatesRepository'
+            => 'Crm\MobiletechModule\Repositories\MobiletechTemplatesRepository',
+
         // ********************************************************************
         // extensions/muj-dum-module
         // ********************************************************************
