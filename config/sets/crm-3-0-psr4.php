@@ -257,6 +257,61 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/invoices-module
+        'Crm\InvoicesModule\Components\ReceiptAdminButtonFactory'
+            => 'Crm\InvoicesModule\Components\DownloadReceiptButton\ReceiptAdminButtonFactory',
+        'Crm\InvoicesModule\Components\DownloadReceiptButton'
+            => 'Crm\InvoicesModule\Components\DownloadReceiptButton\DownloadReceiptButton',
+        'Crm\InvoicesModule\Components\DownloadReceiptButtonFactory'
+            => 'Crm\InvoicesModule\Components\DownloadReceiptButton\DownloadReceiptButtonFactory',
+        'Crm\InvoicesModule\Components\InvoiceAdminButtonFactory'
+            => 'Crm\InvoicesModule\Components\InvoiceButton\InvoiceAdminButtonFactory',
+        'Crm\InvoicesModule\Components\InvoiceButton'
+            => 'Crm\InvoicesModule\Components\InvoiceButton\InvoiceButton',
+        'Crm\InvoicesModule\Components\InvoiceFrontendButtonFactory'
+            => 'Crm\InvoicesModule\Components\InvoiceButton\InvoiceFrontendButtonFactory',
+        'Crm\InvoicesModule\Components\InvoiceDetailsWidget'
+            => 'Crm\InvoicesModule\Components\InvoiceDetailsWidget\InvoiceDetailsWidget',
+        'Crm\InvoicesModule\Components\InvoiceLabel'
+            => 'Crm\InvoicesModule\Components\InvoiceLabel\InvoiceLabel',
+        'Crm\InvoicesModule\Components\PaymentSuccessInvoiceWidget'
+            => 'Crm\InvoicesModule\Components\PaymentSuccessInvoiceWidget\PaymentSuccessInvoiceWidget',
+
+        'Crm\InvoicesModule\DataProvider\PaymentInvoiceProvider'
+            => 'Crm\InvoicesModule\DataProviders\PaymentInvoiceProvider',
+        'Crm\InvoicesModule\DataProvider\UserFormDataProvider'
+            => 'Crm\InvoicesModule\DataProviders\UserFormDataProvider',
+        'Crm\InvoicesModule\DataProvider\ConfigFormDataProvider'
+            => 'Crm\InvoicesModule\DataProviders\ConfigFormDataProvider',
+
+        'Crm\InvoicesModule\InvoiceGenerationException'
+            => 'Crm\InvoicesModule\Models\Generator\InvoiceGenerationException',
+        'Crm\InvoicesModule\PaymentNotInvoiceableException'
+            => 'Crm\InvoicesModule\Models\Generator\PaymentNotInvoiceableException',
+        'Crm\InvoicesModule\ReceiptGenerator'
+            => 'Crm\InvoicesModule\Models\Generator\ReceiptGenerator',
+        'Crm\InvoicesModule\InvoiceGenerator'
+            => 'Crm\InvoicesModule\Models\Generator\InvoiceGenerator',
+
+        'Crm\InvoicesModule\Repository\InvoiceItemsRepository'
+            => 'Crm\InvoicesModule\Repositories\InvoiceItemsRepository',
+        'Crm\InvoicesModule\Repository\InvoicesRepository'
+            => 'Crm\InvoicesModule\Repositories\InvoicesRepository',
+        'Crm\InvoicesModule\Repository\InvoiceNumbersRepository'
+            => 'Crm\InvoicesModule\Repositories\InvoiceNumbersRepository',
+
+        'Crm\InvoicesModule\Sandbox\InvoiceSandbox'
+            => 'Crm\InvoicesModule\Models\Sandbox\InvoiceSandbox',
+        'Crm\InvoicesModule\Sandbox\InvoiceZipGenerator'
+            => 'Crm\InvoicesModule\Models\Sandbox\InvoiceZipGenerator',
+
+        'Crm\InvoicesModule\User\InvoicesUserDataProvider'
+            => 'Crm\InvoicesModule\DataProviders\InvoicesUserDataProvider',
+
+        'Crm\InvoicesModule\Repository\InvoiceNumber'
+            => 'Crm\InvoicesModule\Models\InvoiceNumber\InvoiceNumber',
+        'Crm\InvoicesModule\Model\InvoiceNumberInterface'
+            => 'Crm\InvoicesModule\Models\InvoiceNumber\InvoiceNumberInterface',
+
         // ********************************************************************
         // extensions/issues-module
         // ********************************************************************
