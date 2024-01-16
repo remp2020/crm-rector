@@ -454,6 +454,9 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/privatbankar-module
+        'Crm\PrivatbankarModule\Components\ConfirmationPendingWidget'
+            => 'Crm\PrivatbankarModule\Components\ConfirmationPendingWidget\ConfirmationPendingWidget',
+
         // ********************************************************************
         // extensions/products-module
         // ********************************************************************
