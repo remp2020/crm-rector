@@ -493,6 +493,11 @@ return static function (RectorConfig $rectorConfig) : void {
         // extensions/segment-module
         // ********************************************************************
         // extensions/slsp-sporopay-module
+        'Crm\SlspSporopayModule\MailParser\SlspMailParser'
+            => 'Crm\SlspSporopayModule\Models\MailParser\SlspMailParser',
+        'Crm\SlspSporopayModule\MailParser\SlspNotificationMailParser'
+            => 'Crm\SlspSporopayModule\Models\MailParser\SlspNotificationMailParser',
+
         // ********************************************************************
         // extensions/subscriptions-module
         // ********************************************************************
