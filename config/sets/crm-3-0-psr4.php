@@ -345,7 +345,7 @@ return static function (RectorConfig $rectorConfig) : void {
         'Crm\IssuesModule\Populator\IssuesPopulator'
             => 'Crm\IssuesModule\Populators\IssuesPopulator',
         'Crm\IssuesModule\Populator\MagazinesPopulator'
-            => 'Crm\IssuesModule\Populator\MagazinesPopulator',
+            => 'Crm\IssuesModule\Populators\MagazinesPopulator',
 
         // ********************************************************************
         // extensions/mobiletech-module
