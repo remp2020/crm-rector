@@ -372,6 +372,28 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/multicash-module
+        'Crm\MulticashModule\MailConfirmation\ParsedXMLLogsRepository'
+            => 'Crm\MulticashModule\Repositories\ParsedXMLLogsRepository',
+
+        'Crm\MulticashModule\Builder\ParsedXMLLogsBuilder'
+            => 'Crm\MulticashModule\Models\Builder\ParsedXMLLogsBuilder',
+
+        'Crm\MulticashModule\Parser\ParserInterface'
+            => 'Crm\MulticashModule\Models\Parser\ParserInterface',
+        'Crm\MulticashModule\Parser\XMLBankParser'
+            => 'Crm\MulticashModule\Models\Parser\XMLBankParser',
+        'Crm\MulticashModule\Parser\XMLCamtParser'
+            => 'Crm\MulticashModule\Models\Parser\XMLCamtParser',
+        'Crm\MulticashModule\Parser\XMLParserException'
+            => 'Crm\MulticashModule\Models\Parser\XMLParserException',
+
+        'Crm\MulticashModule\Processor'
+            => 'Crm\MulticashModule\Models\Processor',
+        'Crm\MulticashModule\ProcessorException'
+            => 'Crm\MulticashModule\Models\ProcessorException',
+        'Crm\MulticashModule\XMLContent'
+            => 'Crm\MulticashModule\Models\XMLContent',
+
         // ********************************************************************
         // extensions/onboarding-module
         // ********************************************************************
