@@ -250,6 +250,11 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/gopay-module
+        'Crm\GoPayModule\Repository\GopayPaymentValues'
+            => 'Crm\GoPayModule\Repositories\GopayPaymentValues',
+        'Crm\GoPayModule\Repository\GopayPaymentsRepository'
+            => 'Crm\GoPayModule\Repositories\GopayPaymentsRepository',
+
         // ********************************************************************
         // extensions/invoices-module
         // ********************************************************************
