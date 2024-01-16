@@ -506,6 +506,9 @@ return static function (RectorConfig $rectorConfig) : void {
         // extensions/users-module
         // ********************************************************************
         // extensions/vub-eplatby-module
+        'Crm\VubEplatbyModule\MailParser\VubMailParser'
+            => 'Crm\VubEplatbyModule\Models\MailParser\VubMailParser',
+
         // ********************************************************************
         // extensions/wordpress-module
     ]);
