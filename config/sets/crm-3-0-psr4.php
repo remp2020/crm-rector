@@ -194,6 +194,8 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/dashboard-module
+        // - no changes required
+
         // ********************************************************************
         // extensions/gifts-module
         // ********************************************************************
