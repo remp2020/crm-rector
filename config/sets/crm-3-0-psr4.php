@@ -314,6 +314,39 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/issues-module
+        'Crm\IssuesModule\Components\SubscriptionTypesWithMagazinesWidget'
+            => 'Crm\IssuesModule\Components\SubscriptionTypesWithMagazinesWidget\SubscriptionTypesWithMagazinesWidget',
+
+        'Crm\IssuesModule\Model\ContentAccess'
+            => 'Crm\IssuesModule\Models\Content\ContentAccess',
+        'Crm\IssuesModule\Model\Issue\FilePatternProcessor'
+            => 'Crm\IssuesModule\Models\FilePatternProcessor\FilePatternProcessor',
+        'Crm\IssuesModule\Model\IFilePatternProcessor'
+            => 'Crm\IssuesModule\Models\FilePatternProcessor\IFilePatternProcessor',
+
+        'Crm\IssuesModule\Pdf\Converter'
+            => 'Crm\IssuesModule\Models\Pdf\Converter',
+        'Crm\IssuesModule\Pdf\ConverterError'
+            => 'Crm\IssuesModule\Models\Pdf\ConverterError',
+
+        'Crm\IssuesModule\Repository\IssueBaseRepository'
+            => 'Crm\IssuesModule\Repositories\IssueBaseRepository',
+        'Crm\IssuesModule\Repository\IssuePagesRepository'
+            => 'Crm\IssuesModule\Repositories\IssuePagesRepository',
+        'Crm\IssuesModule\Repository\IssueSourceFilesRepository'
+            => 'Crm\IssuesModule\Repositories\IssueSourceFilesRepository',
+        'Crm\IssuesModule\Repository\MagazinesRepository'
+            => 'Crm\IssuesModule\Repositories\MagazinesRepository',
+        'Crm\IssuesModule\Repository\SubscriptionTypeMagazinesRepository'
+            => 'Crm\IssuesModule\Repositories\SubscriptionTypeMagazinesRepository',
+        'Crm\IssuesModule\Repository\IssuesRepository'
+            => 'Crm\IssuesModule\Repositories\IssuesRepository',
+
+        'Crm\IssuesModule\Populator\IssuesPopulator'
+            => 'Crm\IssuesModule\Populators\IssuesPopulator',
+        'Crm\IssuesModule\Populator\MagazinesPopulator'
+            => 'Crm\IssuesModule\Populator\MagazinesPopulator',
+
         // ********************************************************************
         // extensions/mobiletech-module
         // ********************************************************************
