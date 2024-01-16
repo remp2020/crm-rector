@@ -222,6 +222,32 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/google-play-billing-module
+        'Crm\GooglePlayBillingModule\Components\StopRecurrentPaymentButtonWidget'
+            => 'Crm\GooglePlayBillingModule\Components\StopRecurrentPaymentButtonWidget\StopRecurrentPaymentButtonWidget',
+
+        'Crm\GooglePlayBillingModule\Repository\DeveloperNotificationsRepository'
+            => 'Crm\GooglePlayBillingModule\Repositories\DeveloperNotificationsRepository',
+        'Crm\GooglePlayBillingModule\Repository\GooglePlaySubscriptionTypesRepository'
+            => 'Crm\GooglePlayBillingModule\Repositories\GooglePlaySubscriptionTypesRepository',
+        'Crm\GooglePlayBillingModule\Repository\PurchaseDeviceTokensRepository'
+            => 'Crm\GooglePlayBillingModule\Repositories\PurchaseDeviceTokensRepository',
+        'Crm\GooglePlayBillingModule\Repository\PurchaseTokensRepository'
+            => 'Crm\GooglePlayBillingModule\Repositories\PurchaseTokensRepository',
+
+        'Crm\GooglePlayBillingModule\Model\SubscriptionResponseDateTimesTrait'
+            => 'Crm\GooglePlayBillingModule\Models\SubscriptionResponseProcessor\SubscriptionResponseDateTimesTrait',
+        'Crm\GooglePlayBillingModule\Model\SubscriptionResponseProcessor'
+            => 'Crm\GooglePlayBillingModule\Models\SubscriptionResponseProcessor\SubscriptionResponseProcessor',
+        'Crm\GooglePlayBillingModule\Model\SubscriptionResponseProcessorInterface'
+            => 'Crm\GooglePlayBillingModule\Models\SubscriptionResponseProcessor\SubscriptionResponseProcessorInterface',
+
+        'Crm\GooglePlayBillingModule\User\GooglePlayUserDataProvider'
+            => 'Crm\GooglePlayBillingModule\Models\User\GooglePlayUserDataProvider',
+        'Crm\GooglePlayBillingModule\Model\Config'
+            => 'Crm\GooglePlayBillingModule\Models\Config',
+        'Crm\GooglePlayBillingModule\Model\GooglePlayValidatorFactory'
+            => 'Crm\GooglePlayBillingModule\Models\GooglePlayValidatorFactory',
+
         // ********************************************************************
         // extensions/gopay-module
         // ********************************************************************
