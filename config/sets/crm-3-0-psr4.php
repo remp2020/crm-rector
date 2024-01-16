@@ -463,6 +463,32 @@ return static function (RectorConfig $rectorConfig) : void {
         // extensions/salesfunnel-module
         // ********************************************************************
         // extensions/scenarios-module
+        'Crm\ScenariosModule\Repository\GeneratedEventsRepository'
+            => 'Crm\ScenariosModule\Repositories\GeneratedEventsRepository',
+        'Crm\ScenariosModule\Repository\ScenarioInvalidDataException'
+            => 'Crm\ScenariosModule\Repositories\ScenarioInvalidDataException',
+        'Crm\ScenariosModule\Repository\SelectedVariantsRepository'
+            => 'Crm\ScenariosModule\Repositories\SelectedVariantsRepository',
+        'Crm\ScenariosModule\Repository\ElementElementsRepository'
+            => 'Crm\ScenariosModule\Repositories\ElementElementsRepository',
+        'Crm\ScenariosModule\Repository\TriggerElementsRepository'
+            => 'Crm\ScenariosModule\Repositories\TriggerElementsRepository',
+        'Crm\ScenariosModule\Repository\ElementStatsRepository'
+            => 'Crm\ScenariosModule\Repositories\ElementStatsRepository',
+        'Crm\ScenariosModule\Repository\TriggerStatsRepository'
+            => 'Crm\ScenariosModule\Repositories\TriggerStatsRepository',
+        'Crm\ScenariosModule\Repository\TriggersRepository'
+            => 'Crm\ScenariosModule\Repositories\TriggersRepository',
+        'Crm\ScenariosModule\Repository\ElementsRepository'
+            => 'Crm\ScenariosModule\Repositories\ElementsRepository',
+        'Crm\ScenariosModule\Repository\JobsRepository'
+            => 'Crm\ScenariosModule\Repositories\JobsRepository',
+        'Crm\ScenariosModule\Repository\ScenariosRepository'
+            => 'Crm\ScenariosModule\Repositories\ScenariosRepository',
+
+        'Crm\Scenarios\Test\HasPaymentCriteriaTest'
+            => 'Crm\ScenariosModule\Tests\HasPaymentCriteriaTest',
+
         // ********************************************************************
         // extensions/segment-module
         // ********************************************************************
