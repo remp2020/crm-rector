@@ -198,6 +198,28 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/gifts-module
+        'Crm\GiftsModule\Components\DonatedSubscriptionListingWidget'
+            => 'Crm\GiftsModule\Components\DonatedSubscriptionListingWidget\DonatedSubscriptionListingWidget',
+        'Crm\GiftsModule\Components\GiftCoupons'
+            => 'Crm\GiftsModule\Components\GiftCoupons\GiftCoupons',
+        'Crm\GiftsModule\Components\GiftPaymentItemsListWidget'
+            => 'Crm\GiftsModule\Components\GiftPaymentItemsListWidget\GiftPaymentItemsListWidget',
+        'Crm\GiftsModule\Components\OrderDonatedSubscriptionInfo'
+            => 'Crm\GiftsModule\Components\OrderDonatedSubscriptionInfo\OrderDonatedSubscriptionInfo',
+        'Crm\GiftsModule\Components\PaymentSuccessGiftSubscriptionAddressWidget'
+            => 'Crm\GiftsModule\Components\PaymentSuccessGiftSubscriptionAddressWidget\PaymentSuccessGiftSubscriptionAddressWidget',
+
+        'Crm\GiftsModule\DataProvider\CanDeleteAddressDataProvider'
+            => 'Crm\GiftsModule\DataProviders\CanDeleteAddressDataProvider',
+        'Crm\GiftsModule\DataProvider\PaymentItemTypesFilterDataProvider'
+            => 'Crm\GiftsModule\DataProviders\PaymentItemTypesFilterDataProvider',
+
+        'Crm\GiftsModule\PaymentItem\GiftPaymentItem'
+            => 'Crm\GiftsModule\Models\PaymentItem\GiftPaymentItem',
+
+        'Crm\GiftsModule\Repository\PaymentGiftCouponsRepository'
+            => 'Crm\GiftsModule\Repositories\PaymentGiftCouponsRepository',
+
         // ********************************************************************
         // extensions/google-play-billing-module
         // ********************************************************************
