@@ -681,6 +681,68 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/segment-module
+        'Crm\SegmentsModule\Widget\DashboardSegmentValueBaseWidget'
+            => 'Crm\SegmentModule\Components\DashboardSegmentValueBaseWidget\DashboardSegmentValueBaseWidget',
+
+        'Crm\SegmentModule\Criteria\EmptyCriteriaException'
+            => 'Crm\SegmentModule\Models\Criteria\EmptyCriteriaException',
+        'Crm\SegmentModule\Criteria\Fields'
+            => 'Crm\SegmentModule\Models\Criteria\Fields',
+        'Crm\SegmentModule\Criteria\Generator'
+            => 'Crm\SegmentModule\Models\Criteria\Generator',
+        'Crm\SegmentModule\Criteria\InvalidCriteriaException'
+            => 'Crm\SegmentModule\Models\Criteria\InvalidCriteriaException',
+
+        'Crm\SegmentModule\Params\BaseParam'
+            => 'Crm\SegmentModule\Models\Params\BaseParam',
+        'Crm\SegmentModule\Params\BooleanParam'
+            => 'Crm\SegmentModule\Models\Params\BooleanParam',
+        'Crm\SegmentModule\Params\DecimalParam'
+            => 'Crm\SegmentModule\Models\Params\DecimalParam',
+        'Crm\SegmentModule\Params\InvalidParamException'
+            => 'Crm\SegmentModule\Models\Params\InvalidParamException',
+        'Crm\SegmentModule\Params\NumberArrayParam'
+            => 'Crm\SegmentModule\Models\Params\NumberArrayParam',
+        'Crm\SegmentModule\Params\NumberParam'
+            => 'Crm\SegmentModule\Models\Params\NumberParam',
+        'Crm\SegmentModule\Params\ParamsBag'
+            => 'Crm\SegmentModule\Models\Params\ParamsBag',
+        'Crm\SegmentModule\Params\StringArrayParam'
+            => 'Crm\SegmentModule\Models\Params\StringArrayParam',
+        'Crm\SegmentModule\Params\StringParam'
+            => 'Crm\SegmentModule\Models\Params\StringParam',
+        'Crm\SegmentModule\Params\Validation'
+            => 'Crm\SegmentModule\Models\Params\Validation',
+        'Crm\SegmentModule\Params\DateTimeParam'
+            => 'Crm\SegmentModule\Models\Params\DateTimeParam',
+
+        'Crm\SegmentModule\Repository\SegmentAlreadyExistsException'
+            => 'Crm\SegmentModule\Repositories\SegmentAlreadyExistsException',
+        'Crm\SegmentModule\Repository\SegmentGroupsRepository'
+            => 'Crm\SegmentModule\Repositories\SegmentGroupsRepository',
+        'Crm\SegmentModule\Repository\SegmentsRepository'
+            => 'Crm\SegmentModule\Repositories\SegmentsRepository',
+        'Crm\SegmentModule\Repository\SegmentsValuesRepository'
+            => 'Crm\SegmentModule\Repositories\SegmentsValuesRepository',
+
+        'Crm\SegmentModule\QueryInterface'
+            => 'Crm\SegmentModule\Models\QueryInterface',
+        'Crm\SegmentModule\Segment'
+            => 'Crm\SegmentModule\Models\Segment',
+        'Crm\SegmentModule\SegmentFactory'
+            => 'Crm\SegmentModule\Models\SegmentFactory',
+        'Crm\SegmentModule\SegmentFactoryInterface'
+            => 'Crm\SegmentModule\Models\SegmentFactoryInterface',
+        'Crm\SegmentModule\SegmentInterface'
+            => 'Crm\SegmentModule\Models\SegmentInterface',
+        'Crm\SegmentModule\SegmentQuery'
+            => 'Crm\SegmentModule\Models\SegmentQuery',
+        'Crm\SegmentModule\SegmentWidgetInterface'
+            => 'Crm\SegmentModule\Models\SegmentWidgetInterface',
+
+        'Crm\SegmentsModule\Tests\SegmentQueryTest'
+            => 'Crm\SegmentModule\Tests\SegmentQueryTest',
+
         // ********************************************************************
         // extensions/slsp-sporopay-module
         'Crm\SlspSporopayModule\MailParser\SlspMailParser'
