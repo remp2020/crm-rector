@@ -459,6 +459,125 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/products-module
+        'Crm\ProductsModule\Components\AvgProductsPaymentWidget'
+            => 'Crm\ProductsModule\Components\AvgProductsPaymentWidget\AvgProductsPaymentWidget',
+        'Crm\ProductsModule\Components\FreeShippingProgressBarWidget'
+            => 'Crm\ProductsModule\Components\FreeShippingProgressBarWidget\FreeShippingProgressBarWidget',
+        'Crm\ProductsModule\Components\ProductItemsListWidget'
+            => 'Crm\ProductsModule\Components\ProductItemsListWidget\ProductItemsListWidget',
+        'Crm\ProductsModule\Components\ProductStatsFactory'
+            => 'Crm\ProductsModule\Components\ProductStats\ProductStatsFactory',
+        'Crm\ProductsModule\Components\ProductStats'
+            => 'Crm\ProductsModule\Components\ProductStats\ProductStats',
+        'Crm\ProductsModule\Components\RecommendedProductsWidget'
+            => 'Crm\ProductsModule\Components\RecommendedProductsWidget\RecommendedProductsWidget',
+        'Crm\ProductsModule\Components\TotalShopPaymentsWidget'
+            => 'Crm\ProductsModule\Components\TotalShopPaymentsWidget\TotalShopPaymentsWidget',
+        'Crm\ProductsModule\Components\UserOrdersWidget'
+            => 'Crm\ProductsModule\Components\UserOrdersWidget\UserOrdersWidget',
+
+        'Crm\PaymentsModule\DataProvider\CheckoutFormDataProviderInterface'
+            => 'Crm\ProductsModule\DataProviders\CheckoutFormDataProviderInterface',
+        'Crm\ProductsModule\DataProvider\PaymentFormDataProvider'
+            => 'Crm\ProductsModule\DataProviders\PaymentFormDataProvider',
+        'Crm\ProductsModule\DataProvider\PaymentItemTypesFilterDataProvider'
+            => 'Crm\ProductsModule\DataProviders\PaymentItemTypesFilterDataProvider',
+        'Crm\ProductsModule\DataProvider\PaymentsAdminFilterFormDataProvider'
+            => 'Crm\ProductsModule\DataProviders\PaymentsAdminFilterFormDataProvider',
+        'Crm\ProductsModule\DataProvider\ProductManagerDataProviderInterface'
+            => 'Crm\ProductsModule\DataProviders\ProductManagerDataProviderInterface',
+        'Crm\ProductsModule\DataProvider\ProductTemplatePropertiesDataProviderInterface'
+            => 'Crm\ProductsModule\DataProviders\ProductTemplatePropertiesDataProviderInterface',
+        'Crm\ProductsModule\DataProvider\ProductsFormDataProviderInterface'
+            => 'Crm\ProductsModule\DataProviders\ProductsFormDataProviderInterface',
+        'Crm\ProductsModule\DataProvider\SortShopProductsFormValidationDataProviderInterface'
+            => 'Crm\ProductsModule\DataProviders\SortShopProductsFormValidationDataProviderInterface',
+        'Crm\ProductsModule\DataProvider\TrackerDataProviderInterface'
+            => 'Crm\ProductsModule\DataProviders\TrackerDataProviderInterface',
+
+        'Crm\ProductsModule\Builder\ProductBuilder'
+            => 'Crm\ProductsModule\Models\Builder\ProductBuilder',
+
+        'Crm\ProductsModule\Distribution\ProductDaysFromLastOrderDistribution'
+            => 'Crm\ProductsModule\Models\Distribution\ProductDaysFromLastOrderDistribution',
+        'Crm\ProductsModule\Distribution\ProductSaveEventDistributionException'
+            => 'Crm\ProductsModule\Models\Distribution\ProductSaveEventDistributionException',
+        'Crm\ProductsModule\Distribution\AmountSpentDistribution'
+            => 'Crm\ProductsModule\Models\Distribution\AmountSpentDistribution',
+        'Crm\ProductsModule\Distribution\DistributionInterface'
+            => 'Crm\ProductsModule\Models\Distribution\DistributionInterface',
+        'Crm\ProductsModule\Distribution\PaymentCountsDistribution'
+            => 'Crm\ProductsModule\Models\Distribution\PaymentCountsDistribution',
+        'Crm\ProductsModule\Distribution\ProductShopCountsDistribution'
+            => 'Crm\ProductsModule\Models\Distribution\ProductShopCountsDistribution',
+
+        'Crm\ProductsModule\Ebook\EbookProvider'
+            => 'Crm\ProductsModule\DataProviders\EbookProvider',
+        'Crm\ProductsModule\Ebook\EbookProviderInterface'
+            => 'Crm\ProductsModule\DataProviders\EbookProviderInterface',
+
+        'Crm\ProductsModule\Manager\ProductManager'
+            => 'Crm\ProductsModule\Models\Manager\ProductManager',
+
+        'Crm\ProductsModule\PaymentItem\PaymentItemHelper'
+            => 'Crm\ProductsModule\Models\PaymentItem\PaymentItemHelper',
+        'Crm\ProductsModule\PaymentItem\PostalFeePaymentItem'
+            => 'Crm\ProductsModule\Models\PaymentItem\PostalFeePaymentItem',
+        'Crm\ProductsModule\PaymentItem\ProductPaymentItem'
+            => 'Crm\ProductsModule\Models\PaymentItem\ProductPaymentItem',
+
+        'Crm\ProductsModule\PostalFeeCondition\PostalFeeConditionInterface'
+            => 'Crm\ProductsModule\Models\PostalFeeCondition\PostalFeeConditionInterface',
+        'Crm\ProductsModule\PostalFeeCondition\PostalFeeMessageConditionInterface'
+            => 'Crm\ProductsModule\Models\PostalFeeCondition\PostalFeeMessageConditionInterface',
+        'Crm\ProductsModule\PostalFeeCondition\PostalFeeNumericConditionInterface'
+            => 'Crm\ProductsModule\Models\PostalFeeCondition\PostalFeeNumericConditionInterface',
+        'Crm\ProductsModule\PostalFeeCondition\PostalFeeService'
+            => 'Crm\ProductsModule\Models\PostalFeeCondition\PostalFeeService',
+        'Crm\ProductsModule\PostalFeeCondition\ProductSumCondition'
+            => 'Crm\ProductsModule\Models\PostalFeeCondition\ProductSumCondition',
+        'Crm\ProductsModule\PostalFeeCondition\UserSegmentCondition'
+            => 'Crm\ProductsModule\Models\PostalFeeCondition\UserSegmentCondition',
+
+        'Crm\ProductsModule\Repository\PostalFeesRepository'
+            => 'Crm\ProductsModule\Repositories\PostalFeesRepository',
+        'Crm\ProductsModule\Repository\ProductBundlesRepository'
+            => 'Crm\ProductsModule\Repositories\ProductBundlesRepository',
+        'Crm\ProductsModule\Repository\ProductPropertiesRepository'
+            => 'Crm\ProductsModule\Repositories\ProductPropertiesRepository',
+        'Crm\ProductsModule\Repository\ProductTagsRepository'
+            => 'Crm\ProductsModule\Repositories\ProductTagsRepository',
+        'Crm\ProductsModule\Repository\ProductTemplatePropertiesRepository'
+            => 'Crm\ProductsModule\Repositories\ProductTemplatePropertiesRepository',
+        'Crm\ProductsModule\Repository\ProductTemplatesRepository'
+            => 'Crm\ProductsModule\Repositories\ProductTemplatesRepository',
+        'Crm\ProductsModule\Repository\CountryPostalFeeConditionsRepository'
+            => 'Crm\ProductsModule\Repositories\CountryPostalFeeConditionsRepository',
+        'Crm\ProductsModule\Repository\CountryPostalFeesRepository'
+            => 'Crm\ProductsModule\Repositories\CountryPostalFeesRepository',
+        'Crm\ProductsModule\Repository\TagsRepository'
+            => 'Crm\ProductsModule\Repositories\TagsRepository',
+        'Crm\ProductsModule\Repository\DistributionCentersRepository'
+            => 'Crm\ProductsModule\Repositories\DistributionCentersRepository',
+        'Crm\ProductsModule\Repository\OrdersRepository'
+            => 'Crm\ProductsModule\Repositories\OrdersRepository',
+        'Crm\ProductsModule\Repository\ProductsRepository'
+            => 'Crm\ProductsModule\Repositories\ProductsRepository',
+
+        'Crm\ProductsModule\User\OrdersUserDataProvider'
+            => 'Crm\ProductsModule\DataProviders\OrdersUserDataProvider',
+
+        'Crm\ProductsModule\ProductsCache'
+            => 'Crm\ProductsModule\Models\ProductsCache',
+        'Crm\ProductsModule\Model\ProductsTrait'
+            => 'Crm\ProductsModule\Models\ProductsTrait',
+        'Crm\ProductsModule\Model\ShopPaymentCompleteRedirectResolver'
+            => 'Crm\ProductsModule\Models\ShopPaymentCompleteRedirectResolver',
+        'Crm\ProductsModule\TagsCache'
+            => 'Crm\ProductsModule\Models\TagsCache',
+        'Crm\ProductsModule\Model\Config'
+            => 'Crm\ProductsModule\Models\Config',
+
         // ********************************************************************
         // extensions/salesfunnel-module
         // ********************************************************************
