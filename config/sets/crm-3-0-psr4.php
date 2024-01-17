@@ -580,6 +580,77 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/salesfunnel-module
+        'Crm\SalesFunnelModule\Components\AmountDistributionWidget'
+            => 'Crm\SalesFunnelModule\Components\AmountDistributionWidget\AmountDistributionWidget',
+        'Crm\SalesFunnelModule\Components\AmountDistributionWidgetFactory'
+            => 'Crm\SalesFunnelModule\Components\AmountDistributionWidget\AmountDistributionWidgetFactory',
+        'Crm\SalesFunnelModule\Components\DaysFromLastSubscriptionDistributionWidget'
+            => 'Crm\SalesFunnelModule\Components\DaysFromLastSubscriptionDistributionWidget\DaysFromLastSubscriptionDistributionWidget',
+        'Crm\SalesFunnelModule\Components\DaysFromLastSubscriptionDistributionWidgetFactory'
+            => 'Crm\SalesFunnelModule\Components\DaysFromLastSubscriptionDistributionWidget\DaysFromLastSubscriptionDistributionWidgetFactory',
+        'Crm\SalesFunnelModule\Components\FinishRegistrationWidget'
+            => 'Crm\SalesFunnelModule\Components\FinishRegistrationWidget\FinishRegistrationWidget',
+        'Crm\SalesFunnelModule\Components\NewSubscriptionWidget'
+            => 'Crm\SalesFunnelModule\Components\NewSubscriptionWidget\NewSubscriptionWidget',
+        'Crm\SalesFunnelModule\Components\PaymentDistributionWidget'
+            => 'Crm\SalesFunnelModule\Components\PaymentDistributionWidget\PaymentDistributionWidget',
+        'Crm\SalesFunnelModule\Components\PaymentDistributionWidgetFactory'
+            => 'Crm\SalesFunnelModule\Components\PaymentDistributionWidget\PaymentDistributionWidgetFactory',
+        'Crm\SalesFunnelModule\Components\SalesFunnelUserListingWidget'
+            => 'Crm\SalesFunnelModule\Components\SalesFunnelUserListingWidget\SalesFunnelUserListingWidget',
+        'Crm\SalesFunnelModule\Components\SubscriptionTypesInSalesFunnelsWidget'
+            => 'Crm\SalesFunnelModule\Components\SubscriptionTypesInSalesFunnelsWidget\SubscriptionTypesInSalesFunnelsWidget',
+        'Crm\SalesFunnelModule\Components\WindowPreview'
+            => 'Crm\SalesFunnelModule\Components\WindowPreview\WindowPreview',
+        'Crm\SalesFunnelModule\Components\WindowPreviewControlFactoryInterface'
+            => 'Crm\SalesFunnelModule\Components\WindowPreview\WindowPreviewControlFactoryInterface',
+
+        'Crm\SalesFunnelModule\DataProvider\PaymentsAdminFilterFormDataProvider'
+            => 'Crm\SalesFunnelModule\DataProviders\PaymentsAdminFilterFormDataProvider',
+        'Crm\SalesFunnelModule\DataProvider\RetentionAnalysisDataProvider'
+            => 'Crm\SalesFunnelModule\DataProviders\RetentionAnalysisDataProvider',
+        'Crm\SalesFunnelModule\DataProvider\SalesFunnelPaymentFormDataProviderInterface'
+            => 'Crm\SalesFunnelModule\DataProviders\SalesFunnelPaymentFormDataProviderInterface',
+        'Crm\SalesFunnelModule\DataProvider\SalesFunnelVariablesDataProviderInterface'
+            => 'Crm\SalesFunnelModule\DataProviders\SalesFunnelVariablesDataProviderInterface',
+        'Crm\SalesFunnelModule\DataProvider\TrackerDataProviderInterface'
+            => 'Crm\SalesFunnelModule\DataProviders\TrackerDataProviderInterface',
+        'Crm\SalesFunnelModule\DataProvider\ValidateUserFunnelAccessDataProviderInterface'
+            => 'Crm\SalesFunnelModule\DataProviders\ValidateUserFunnelAccessDataProviderInterface',
+
+        'Crm\SalesFunnelModule\Distribution\AbstractFunnelDistribution'
+            => 'Crm\SalesFunnelModule\Models\Distribution\AbstractFunnelDistribution',
+        'Crm\SalesFunnelModule\Distribution\DistributionInterface'
+            => 'Crm\SalesFunnelModule\Models\Distribution\DistributionInterface',
+        'Crm\SalesFunnelModule\Distribution\PaymentsCountDistribution'
+            => 'Crm\SalesFunnelModule\Models\Distribution\PaymentsCountDistribution',
+        'Crm\SalesFunnelModule\Distribution\PaymentsSumDistribution'
+            => 'Crm\SalesFunnelModule\Models\Distribution\PaymentsSumDistribution',
+        'Crm\SalesFunnelModule\Distribution\SubscriptionDaysDistribution'
+            => 'Crm\SalesFunnelModule\Models\Distribution\SubscriptionDaysDistribution',
+
+        'Crm\SalesFunnelModule\SalesFunnelAlreadyExistsException'
+            => 'Crm\SalesFunnelModule\Repositories\SalesFunnelAlreadyExistsException',
+        'Crm\SalesFunnelModule\SalesFunnelsConversionDistributionsRepository'
+            => 'Crm\SalesFunnelModule\Repositories\SalesFunnelsConversionDistributionsRepository',
+        'Crm\SalesFunnelModule\Repository\SalesFunnelsMetaRepository'
+            => 'Crm\SalesFunnelModule\Repositories\SalesFunnelsMetaRepository',
+        'Crm\SalesFunnelModule\Repository\SalesFunnelsPaymentGatewaysRepository'
+            => 'Crm\SalesFunnelModule\Repositories\SalesFunnelsPaymentGatewaysRepository',
+        'Crm\SalesFunnelModule\Repository\SalesFunnelsRepository'
+            => 'Crm\SalesFunnelModule\Repositories\SalesFunnelsRepository',
+        'Crm\SalesFunnelModule\Repository\SalesFunnelsStatsRepository'
+            => 'Crm\SalesFunnelModule\Repositories\SalesFunnelsStatsRepository',
+        'Crm\SalesFunnelModule\Repository\SalesFunnelsSubscriptionTypesRepository'
+            => 'Crm\SalesFunnelModule\Repositories\SalesFunnelsSubscriptionTypesRepository',
+        'Crm\SalesFunnelModule\Repository\SalesFunnelTagsRepository'
+            => 'Crm\SalesFunnelModule\Repositories\SalesFunnelTagsRepository',
+
+        'Crm\SalesFunnelModule\SalesFunnelPaymentCompleteRedirectResolver'
+            => 'Crm\SalesFunnelModule\Models\SalesFunnelPaymentCompleteRedirectResolver',
+        'Crm\SalesFunnelModule\SalesFunnelsCache'
+            => 'Crm\SalesFunnelModule\Models\SalesFunnelsCache',
+
         // ********************************************************************
         // extensions/scenarios-module
         'Crm\ScenariosModule\Repository\GeneratedEventsRepository'
