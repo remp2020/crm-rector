@@ -983,6 +983,246 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/users-module
+        'Crm\UsersModule\Components\ActiveRegisteredUsersStatWidget'
+            => 'Crm\UsersModule\Components\ActiveRegisteredUsersStatWidget\ActiveRegisteredUsersStatWidget',
+        'Crm\UsersModule\Components\AddressWidget'
+            => 'Crm\UsersModule\Components\AddressWidget\AddressWidget',
+        'Crm\UsersModule\Components\AutologinTokens'
+            => 'Crm\UsersModule\Components\AutologinTokens\AutologinTokens',
+        'Crm\UsersModule\Components\MonthToDateUsersStatWidget'
+            => 'Crm\UsersModule\Components\MonthToDateUsersStatWidget\MonthToDateUsersStatWidget',
+        'Crm\UsersModule\Components\MonthUsersSmallBarGraphWidget'
+            => 'Crm\UsersModule\Components\MonthUsersSmallBarGraphWidget\MonthUsersSmallBarGraphWidget',
+        'Crm\UsersModule\Components\MonthUsersStatWidget'
+            => 'Crm\UsersModule\Components\MonthUsersStatWidget\MonthUsersStatWidget',
+        'Crm\UsersModule\Components\SsoWidget'
+            => 'Crm\UsersModule\Components\SsoWidget\SsoWidget',
+        'Crm\UsersModule\Components\TodayUsersStatWidget'
+            => 'Crm\UsersModule\Components\TodayUsersStatWidget\TodayUsersStatWidget',
+        'Crm\UsersModule\Components\UserActionLogAdminFactoryInterface'
+            => 'Crm\UsersModule\Components\UserActionLogAdmin\UserActionLogAdminFactoryInterface',
+        'Crm\UsersModule\Components\UserActionLogAdmin'
+            => 'Crm\UsersModule\Components\UserActionLogAdmin\UserActionLogAdmin',
+        'Crm\UsersModule\Components\UserConnectedAccountsListWidget'
+            => 'Crm\UsersModule\Components\UserConnectedAccountsListWidget\UserConnectedAccountsListWidget',
+        'Crm\UsersModule\Components\UserLoginAttempts'
+            => 'Crm\UsersModule\Components\UserLoginAttempts\UserLoginAttempts',
+        'Crm\UsersModule\Components\UserMeta'
+            => 'Crm\UsersModule\Components\UserMeta\UserMeta',
+        'Crm\UsersModule\Components\UserPasswordChanges'
+            => 'Crm\UsersModule\Components\UserPasswordChanges\UserPasswordChanges',
+        'Crm\UsersModule\Components\UserSourceAccesses'
+            => 'Crm\UsersModule\Components\UserSourceAccesses\UserSourceAccesses',
+        'Crm\UsersModule\Components\UserTokens'
+            => 'Crm\UsersModule\Components\UserTokens\UserTokens',
+
+        'Crm\UsersModule\Components\Widgets\DetailWidget'
+            => 'Crm\UsersModule\Components\Widgets\DetailWidget\DetailWidget',
+        'Crm\UsersModule\Components\Widgets\DetailWidgetFactoryInterface'
+            => 'Crm\UsersModule\Components\Widgets\DetailWidget\DetailWidgetFactoryInterface',
+
+        'Crm\UsersModule\DataProvider\RegisterFormDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\RegisterFormDataProviderInterface',
+        'Crm\UsersModule\DataProvider\UserFormDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\UserFormDataProviderInterface',
+        'Crm\UsersModule\DataProvider\UsersClaimUserDataProvider'
+            => 'Crm\UsersModule\DataProviders\UsersClaimUserDataProvider',
+        'Crm\UsersModule\DataProvider\AccessTokenDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\AccessTokenDataProviderInterface',
+        'Crm\UsersModule\DataProvider\AddressFormDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\AddressFormDataProviderInterface',
+        'Crm\UsersModule\DataProvider\CanDeleteAddressDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\CanDeleteAddressDataProviderInterface',
+        'Crm\UsersModule\User\ClaimUserDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\ClaimUserDataProviderInterface',
+        'Crm\UsersModule\DataProvider\FilterAbusiveUserFormDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\FilterAbusiveUserFormDataProviderInterface',
+        'Crm\UsersModule\DataProvider\FilterUserActionLogsDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\FilterUserActionLogsDataProviderInterface',
+        'Crm\UsersModule\DataProvider\FilterUserActionLogsFormDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\FilterUserActionLogsFormDataProviderInterface',
+        'Crm\UsersModule\DataProvider\FilterUsersFormDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\FilterUsersFormDataProviderInterface',
+        'Crm\UsersModule\DataProvider\FilterUsersSelectionDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\FilterUsersSelectionDataProviderInterface',
+        'Crm\UsersModule\DataProvider\GoogleSignInDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\GoogleSignInDataProviderInterface',
+        'Crm\UsersModule\DataProvider\GoogleTokenSignInDataProviderInterface'
+            => 'Crm\UsersModule\DataProviders\GoogleTokenSignInDataProviderInterface',
+        'Crm\UsersModule\DataProvider\UniversalSearchDataProvider'
+            => 'Crm\UsersModule\DataProviders\UniversalSearchDataProvider',
+
+        'Crm\UsersModule\User\AddressesUserDataProvider'
+            => 'Crm\UsersModule\DataProviders\AddressesUserDataProvider',
+        'Crm\UsersModule\User\AdminUserGroupsUserDataProvider'
+            => 'Crm\UsersModule\DataProviders\AdminUserGroupsUserDataProvider',
+        'Crm\UsersModule\User\AutoLoginTokensUserDataProvider'
+            => 'Crm\UsersModule\DataProviders\AutoLoginTokensUserDataProvider',
+        'Crm\UsersModule\User\BasicUserDataProvider'
+            => 'Crm\UsersModule\DataProviders\BasicUserDataProvider',
+        'Crm\UsersModule\User\LoginAttemptsUserDataProvider'
+            => 'Crm\UsersModule\DataProviders\LoginAttemptsUserDataProvider',
+        'Crm\UsersModule\User\UserConnectedAccountsDataProvider'
+            => 'Crm\UsersModule\DataProviders\UserConnectedAccountsDataProvider',
+        'Crm\UsersModule\User\UserMetaUserDataProvider'
+            => 'Crm\UsersModule\DataProviders\UserMetaUserDataProvider',
+
+        'Crm\UsersModule\Auth\Access\AccessToken'
+            => 'Crm\UsersModule\Models\Auth\Access\AccessToken',
+        'Crm\UsersModule\Auth\Access\AccessTokenNotFoundException'
+            => 'Crm\UsersModule\Models\Auth\Access\AccessTokenNotFoundException',
+        'Crm\UsersModule\Auth\Access\TokenGenerator'
+            => 'Crm\UsersModule\Models\Auth\Access\TokenGenerator',
+
+        'Crm\UsersModule\Auth\AutoLogin\AutoLogin'
+            => 'Crm\UsersModule\Models\Auth\AutoLogin\AutoLogin',
+
+        'Crm\UsersModule\Auth\Rate\IpRateLimit'
+            => 'Crm\UsersModule\Models\Auth\Rate\IpRateLimit',
+        'Crm\UsersModule\Auth\Rate\RateLimitException'
+            => 'Crm\UsersModule\Models\Auth\Rate\RateLimitException',
+        'Crm\UsersModule\Auth\Rate\RegistrationIpRateLimit'
+            => 'Crm\UsersModule\Models\Auth\Rate\RegistrationIpRateLimit',
+        'Crm\UsersModule\Auth\Rate\WrongPasswordRateLimit'
+            => 'Crm\UsersModule\Models\Auth\Rate\WrongPasswordRateLimit',
+
+        'Crm\UsersModule\Auth\AutoLogin\Repository\AutoLoginTokensRepository'
+            => 'Crm\UsersModule\Repositories\AutoLoginTokensRepository',
+        'Crm\UsersModule\Auth\Repository\AdminAccessRepository'
+            => 'Crm\UsersModule\Repositories\AdminAccessRepository',
+        'Crm\UsersModule\Auth\Repository\AdminGroupsAccessRepository'
+            => 'Crm\UsersModule\Repositories\AdminGroupsAccessRepository',
+        'Crm\UsersModule\Auth\Repository\AdminGroupsRepository'
+            => 'Crm\UsersModule\Repositories\AdminGroupsRepository',
+        'Crm\UsersModule\Auth\Repository\AdminUserGroupsRepository'
+            => 'Crm\UsersModule\Repositories\AdminUserGroupsRepository',
+
+        'Crm\UsersModule\Auth\Sso\AlreadyLinkedAccountSsoException'
+            => 'Crm\UsersModule\Models\Auth\Sso\AlreadyLinkedAccountSsoException',
+        'Crm\UsersModule\Auth\Sso\AppleSignIn'
+            => 'Crm\UsersModule\Models\Auth\Sso\AppleSignIn',
+        'Crm\UsersModule\Auth\Sso\GoogleSignIn'
+            => 'Crm\UsersModule\Models\Auth\Sso\GoogleSignIn',
+        'Crm\UsersModule\Auth\Sso\SsoException'
+            => 'Crm\UsersModule\Models\Auth\Sso\SsoException',
+        'Crm\UsersModule\Auth\Sso\SsoUserManager'
+            => 'Crm\UsersModule\Models\Auth\Sso\SsoUserManager',
+
+        'Crm\UsersModule\Auth\Authorizator'
+            => 'Crm\UsersModule\Models\Auth\Authorizator',
+        'Crm\UsersModule\Auth\InvalidEmailException'
+            => 'Crm\UsersModule\Models\Auth\InvalidEmailException',
+        'Crm\UsersModule\Auth\PasswordGenerator'
+            => 'Crm\UsersModule\Models\Auth\PasswordGenerator',
+        'Crm\UsersModule\Auth\Permissions'
+            => 'Crm\UsersModule\Models\Auth\Permissions',
+        'Crm\UsersModule\Auth\UserAuthenticator'
+            => 'Crm\UsersModule\Models\Auth\UserAuthenticator',
+        'Crm\UsersModule\Auth\SignInRedirectValidator'
+            => 'Crm\UsersModule\Models\Auth\SignInRedirectValidator',
+        'Crm\UsersModule\Auth\UserManager'
+            => 'Crm\UsersModule\Models\Auth\UserManager',
+        'Crm\UsersModule\Auth\AccessTokensApiAuthorizationInterface'
+            => 'Crm\UsersModule\Models\Auth\AccessTokensApiAuthorizationInterface',
+
+        'Crm\UsersModule\Auth\DefaultUserTokenAuthorization'
+            => 'Crm\UsersModule\Models\Auth\DefaultUserTokenAuthorization',
+        'Crm\UsersModule\Auth\DeviceTokenAuthorization'
+            => 'Crm\UsersModule\Models\Auth\DeviceTokenAuthorization',
+        'Crm\UsersModule\Auth\ServiceTokenAuthorization'
+            => 'Crm\UsersModule\Models\Auth\ServiceTokenAuthorization',
+        'Crm\UsersModule\Auth\UserTokenAuthorization'
+            => 'Crm\UsersModule\Models\Auth\UserTokenAuthorization',
+        'Crm\UsersModule\Auth\UsersApiAuthorizationInterface'
+            => 'Crm\UsersModule\Models\Auth\UsersApiAuthorizationInterface',
+
+        'Crm\UsersModule\Builder\UserBuilder'
+            => 'Crm\UsersModule\Models\Builder\UserBuilder',
+
+        'Crm\UsersModule\Email\EmailValidator'
+            => 'Crm\UsersModule\Models\Email\EmailValidator',
+        'Crm\UsersModule\Email\RegexpValidator'
+            => 'Crm\UsersModule\Models\Email\RegexpValidator',
+        'Crm\UsersModule\Email\StaticDomainFileValidator'
+            => 'Crm\UsersModule\Models\Email\StaticDomainFileValidator',
+        'Crm\UsersModule\Email\ValidatorInterface'
+            => 'Crm\UsersModule\Models\Email\ValidatorInterface',
+
+        'Crm\UsersModule\Locale\UserDataLocaleResolver'
+            => 'Crm\UsersModule\Models\Locale\UserDataLocaleResolver',
+
+        'Crm\UsersModule\Repository\AccessTokensRepository'
+            => 'Crm\UsersModule\Repositories\AccessTokensRepository',
+        'Crm\UsersModule\Repository\UserMetaRepository'
+            => 'Crm\UsersModule\Repositories\UserMetaRepository',
+        'Crm\UsersModule\Repository\UserStatsRepository'
+            => 'Crm\UsersModule\Repositories\UserStatsRepository',
+        'Crm\UsersModule\Repository\AddressChangeRequestsRepository'
+            => 'Crm\UsersModule\Repositories\AddressChangeRequestsRepository',
+        'Crm\UsersModule\Repository\AddressTypesRepository'
+            => 'Crm\UsersModule\Repositories\AddressTypesRepository',
+        'Crm\UsersModule\Repository\AddressesMetaRepository'
+            => 'Crm\UsersModule\Repositories\AddressesMetaRepository',
+        'Crm\UsersModule\Repository\AddressesRepository'
+            => 'Crm\UsersModule\Repositories\AddressesRepository',
+        'Crm\UsersModule\Repository\CantDeleteAddressException'
+            => 'Crm\UsersModule\Repositories\CantDeleteAddressException',
+        'Crm\UsersModule\Repository\ChangePasswordsLogsRepository'
+            => 'Crm\UsersModule\Repositories\ChangePasswordsLogsRepository',
+        'Crm\UsersModule\Repository\CountriesRepository'
+            => 'Crm\UsersModule\Repositories\CountriesRepository',
+        'Crm\UsersModule\Repository\GroupsRepository'
+            => 'Crm\UsersModule\Repositories\GroupsRepository',
+        'Crm\UsersModule\Repository\PasswordResetTokensRepository'
+            => 'Crm\UsersModule\Repositories\PasswordResetTokensRepository',
+        'Crm\UsersModule\Repository\ShortPasswordException'
+            => 'Crm\UsersModule\Repositories\ShortPasswordException',
+        'Crm\UsersModule\Repository\UserActionsLogRepository'
+            => 'Crm\UsersModule\Repositories\UserActionsLogRepository',
+        'Crm\UsersModule\Repository\UserAlreadyExistsException'
+            => 'Crm\UsersModule\Repositories\UserAlreadyExistsException',
+        'Crm\UsersModule\Repository\UserEmailConfirmationsRepository'
+            => 'Crm\UsersModule\Repositories\UserEmailConfirmationsRepository',
+        'Crm\UsersModule\Repository\UserGroupsRepository'
+            => 'Crm\UsersModule\Repositories\UserGroupsRepository',
+        'Crm\UsersModule\Repository\RegistrationAttemptsRepository'
+            => 'Crm\UsersModule\Repositories\RegistrationAttemptsRepository',
+        'Crm\UsersModule\Repository\LoginAttemptsRepository'
+            => 'Crm\UsersModule\Repositories\LoginAttemptsRepository',
+        'Crm\UsersModule\Repository\UserConnectedAccountsRepository'
+            => 'Crm\UsersModule\Repositories\UserConnectedAccountsRepository',
+        'Crm\UsersModule\Repository\UsersRepository'
+            => 'Crm\UsersModule\Repositories\UsersRepository',
+
+        'Crm\UsersModule\User\ClaimedUserException'
+            => 'Crm\UsersModule\Models\User\ClaimedUserException',
+        'Crm\UsersModule\User\IUserGetter'
+            => 'Crm\UsersModule\Models\User\IUserGetter',
+
+        'Crm\UsersModule\User\ReachChecker'
+            => 'Crm\UsersModule\Models\User\ReachChecker',
+        'Crm\UsersModule\User\UnclaimedUserException'
+            => 'Crm\UsersModule\Models\User\UnclaimedUserException',
+        'Crm\UsersModule\User\UserData'
+            => 'Crm\UsersModule\Models\User\UserData',
+        'Crm\UsersModule\User\ZipBuilder'
+            => 'Crm\UsersModule\Models\User\ZipBuilder',
+        'Crm\UsersModule\User\UnclaimedUser'
+            => 'Crm\UsersModule\Models\User\UnclaimedUser',
+
+        'Crm\UsersModule\AdminFilterFormData'
+            => 'Crm\UsersModule\Models\AdminFilterFormData',
+
+        'Crm\UsersModule\Populator\AutologinPopulator'
+            => 'Crm\UsersModule\Populators\AutologinPopulator',
+        'Crm\UsersModule\Populator\GroupsPopulator'
+            => 'Crm\UsersModule\Populators\GroupsPopulator',
+        'Crm\UsersModule\Populator\UsersPopulator'
+            => 'Crm\UsersModule\Populators\UsersPopulator',
+
+        'Crm\UsersModule\Repository\Tests\CountriesRepositoryTest'
+            => 'Crm\UsersModule\Tests\Repositories\CountriesRepositoryTest',
+
         // ********************************************************************
         // extensions/vub-eplatby-module
         'Crm\VubEplatbyModule\MailParser\VubMailParser'
