@@ -752,6 +752,177 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/subscriptions-module
+        'Crm\SubscriptionsModule\Components\IWidgetLegend'
+            => 'Crm\SubscriptionsModule\Components\WidgetLegendInterface',
+
+        'Crm\SubscriptionsModule\Components\ActualSubscribersRegistrationSourceStatsWidget'
+            => 'Crm\SubscriptionsModule\Components\ActualSubscribersRegistrationSourceStatsWidget\ActualSubscribersRegistrationSourceStatsWidget',
+        'Crm\SubscriptionsModule\Components\ActualSubscribersStatWidget'
+            => 'Crm\SubscriptionsModule\Components\ActualSubscribersStatWidget\ActualSubscribersStatWidget',
+        'Crm\SubscriptionsModule\Components\ActualSubscriptionsStatWidget'
+            => 'Crm\SubscriptionsModule\Components\ActualSubscriptionsStatWidget\ActualSubscriptionsStatWidget',
+        'Crm\SubscriptionsModule\Components\ActualUserSubscriptions'
+            => 'Crm\SubscriptionsModule\Components\ActualUserSubscriptions\ActualUserSubscriptions',
+        'Crm\SubscriptionsModule\Components\EndingSubscriptionsWidgetFactoryInterface'
+            => 'Crm\SubscriptionsModule\Components\EndingSubscriptionsWidget\EndingSubscriptionsWidgetFactoryInterface',
+        'Crm\SubscriptionsModule\Components\EndingSubscriptionsWidget'
+            => 'Crm\SubscriptionsModule\Components\EndingSubscriptionsWidget\EndingSubscriptionsWidget',
+        'Crm\SubscriptionsModule\Components\MonthSubscriptionsStatWidget'
+            => 'Crm\SubscriptionsModule\Components\MonthSubscriptionsStatWidget\MonthSubscriptionsStatWidget',
+        'Crm\SubscriptionsModule\Components\MonthSubscriptionsSmallBarGraphWidget'
+            => 'Crm\SubscriptionsModule\Components\MonthSubscriptionsSmallBarGraphWidget\MonthSubscriptionsSmallBarGraphWidget',
+        'Crm\SubscriptionsModule\Components\MonthToDateSubscriptionsStatWidget'
+            => 'Crm\SubscriptionsModule\Components\MonthToDateSubscriptionsStatWidget\MonthToDateSubscriptionsStatWidget',
+        'Crm\SubscriptionsModule\Components\SubscribersWithMissingAddressWidget'
+            => 'Crm\SubscriptionsModule\Components\PrintSubscribersWithoutPrintAddressWidget\PrintSubscribersWithoutPrintAddressWidget',
+        'Crm\SubscriptionsModule\Components\RenewedSubscriptionsEndingWithinPeriodWidget'
+            => 'Crm\SubscriptionsModule\Components\RenewedSubscriptionsEndingWithinPeriodWidget\RenewedSubscriptionsEndingWithinPeriodWidget',
+        'Crm\SubscriptionsModule\Components\StopSubscriptionWidget'
+            => 'Crm\SubscriptionsModule\Components\StopSubscriptionWidget\StopSubscriptionWidget',
+        'Crm\SubscriptionsModule\Components\SubscriptionButton'
+            => 'Crm\SubscriptionsModule\Components\SubscriptionButton\SubscriptionButton',
+        'Crm\SubscriptionsModule\Components\SubscriptionEndsStatsFactoryInterface'
+            => 'Crm\SubscriptionsModule\Components\SubscriptionEndsStats\SubscriptionEndsStatsFactoryInterface',
+        'Crm\SubscriptionsModule\Components\SubscriptionEndsStats'
+            => 'Crm\SubscriptionsModule\Components\SubscriptionEndsStats\SubscriptionEndsStats',
+        'Crm\SubscriptionsModule\Components\SubscriptionsEndingWithinPeriodWidget'
+            => 'Crm\SubscriptionsModule\Components\SubscriptionsEndingWithinPeriodWidget\SubscriptionsEndingWithinPeriodWidget',
+        'Crm\SubscriptionsModule\Components\TodaySubscriptionsStatWidget'
+            => 'Crm\SubscriptionsModule\Components\TodaySubscriptionsStatWidget\TodaySubscriptionsStatWidget',
+        'Crm\SubscriptionsModule\Components\TotalSubscriptionsStatWidget'
+            => 'Crm\SubscriptionsModule\Components\TotalSubscriptionsStatWidget\TotalSubscriptionsStatWidget',
+        'Crm\SubscriptionsModule\Components\UserSubscriptionInfoWidget'
+            => 'Crm\SubscriptionsModule\Components\UserSubscriptionInfoWidget\UserSubscriptionInfoWidget',
+        'Crm\SubscriptionsModule\Components\UserSubscriptionsListing'
+            => 'Crm\SubscriptionsModule\Components\UserSubscriptionsListing\UserSubscriptionsListing',
+        'Crm\SubscriptionsModule\Components\UsersAbusiveAdditionalWidget'
+            => 'Crm\SubscriptionsModule\Components\UsersAbusiveAdditionalWidget\UsersAbusiveAdditionalWidget',
+        'Crm\SubscriptionsModule\Components\SubscriptionEndsSuppressionWidget'
+            => 'Crm\SubscriptionsModule\Components\SubscriptionEndsSuppressionWidget\SubscriptionEndsSuppressionWidget',
+
+        'Crm\SubscriptionsModule\DataProvider\EndingSubscriptionsDataProviderInterface'
+            => 'Crm\SubscriptionsModule\DataProviders\EndingSubscriptionsDataProviderInterface',
+        'Crm\SubscriptionsModule\DataProvider\FilterAbusiveUserFormDataProvider'
+            => 'Crm\SubscriptionsModule\DataProviders\FilterAbusiveUserFormDataProvider',
+        'Crm\SubscriptionsModule\DataProvider\FilterUserActionLogsFormDataProvider'
+            => 'Crm\SubscriptionsModule\DataProviders\FilterUserActionLogsFormDataProvider',
+        'Crm\SubscriptionsModule\DataProvider\FilterUserActionLogsSelectionDataProvider'
+            => 'Crm\SubscriptionsModule\DataProviders\FilterUserActionLogsSelectionDataProvider',
+        'Crm\SubscriptionsModule\DataProvider\FilterUsersFormDataProvider'
+            => 'Crm\SubscriptionsModule\DataProviders\FilterUsersFormDataProvider',
+        'Crm\SubscriptionsModule\DataProvider\PaymentFromVariableSymbolDataProviderInterface'
+            => 'Crm\SubscriptionsModule\DataProviders\PaymentFromVariableSymbolDataProviderInterface',
+        'Crm\SubscriptionsModule\DataProvider\SubscriptionAccessStatsDataProviderInterface'
+            => 'Crm\SubscriptionsModule\DataProviders\SubscriptionAccessStatsDataProviderInterface',
+        'Crm\SubscriptionsModule\DataProvider\SubscriptionFormDataProviderInterface'
+            => 'Crm\SubscriptionsModule\DataProviders\SubscriptionFormDataProviderInterface',
+        'Crm\SubscriptionsModule\DataProvider\SubscriptionTypeFormProviderInterface'
+            => 'Crm\SubscriptionsModule\DataProviders\SubscriptionTypeFormProviderInterface',
+        'Crm\SubscriptionsModule\DataProvider\SubscriptionsClaimUserDataProvider'
+            => 'Crm\SubscriptionsModule\DataProviders\SubscriptionsClaimUserDataProvider',
+        'Crm\SubscriptionsModule\DataProvider\CanDeleteAddressDataProvider'
+            => 'Crm\SubscriptionsModule\DataProviders\CanDeleteAddressDataProvider',
+        'Crm\SubscriptionsModule\DataProvider\CanUpdateSubscriptionTypeItemDataProviderInterface'
+            => 'Crm\SubscriptionsModule\DataProviders\CanUpdateSubscriptionTypeItemDataProviderInterface',
+
+        'Crm\SubscriptionsModule\Builder\SubscriptionTypeBuilder'
+            => 'Crm\SubscriptionsModule\Models\Builder\SubscriptionTypeBuilder',
+
+        'Crm\SubscriptionsModule\Extension\ExtendActualExtension'
+            => 'Crm\SubscriptionsModule\Models\Extension\ExtendActualExtension',
+        'Crm\SubscriptionsModule\Extension\ExtendLastExtension'
+            => 'Crm\SubscriptionsModule\Models\Extension\ExtendLastExtension',
+        'Crm\SubscriptionsModule\Extension\ExtendSameActualExtension'
+            => 'Crm\SubscriptionsModule\Models\Extension\ExtendSameActualExtension',
+        'Crm\SubscriptionsModule\Extension\ExtendSameContentAccess'
+            => 'Crm\SubscriptionsModule\Models\Extension\ExtendSameContentAccess',
+        'Crm\SubscriptionsModule\Extension\ExtendSameTypeExtension'
+            => 'Crm\SubscriptionsModule\Models\Extension\ExtendSameTypeExtension',
+        'Crm\SubscriptionsModule\Extension\Extension'
+            => 'Crm\SubscriptionsModule\Models\Extension\Extension',
+        'Crm\SubscriptionsModule\Extension\ExtensionInterface'
+            => 'Crm\SubscriptionsModule\Models\Extension\ExtensionInterface',
+        'Crm\SubscriptionsModule\Extension\ExtensionMethodFactory'
+            => 'Crm\SubscriptionsModule\Models\Extension\ExtensionMethodFactory',
+        'Crm\SubscriptionsModule\Extension\StartNowExtension'
+            => 'Crm\SubscriptionsModule\Models\Extension\StartNowExtension',
+
+        'Crm\SubscriptionsModule\Generator\SubscriptionsGenerator'
+            => 'Crm\SubscriptionsModule\Models\Generator\SubscriptionsGenerator',
+        'Crm\SubscriptionsModule\Generator\SubscriptionsParams'
+            => 'Crm\SubscriptionsModule\Models\Generator\SubscriptionsParams',
+
+        'Crm\SubscriptionsModule\Length\CalendarDaysLengthMethod'
+            => 'Crm\SubscriptionsModule\Models\Length\CalendarDaysLengthMethod',
+        'Crm\SubscriptionsModule\Length\FixDaysLengthMethod'
+            => 'Crm\SubscriptionsModule\Models\Length\FixDaysLengthMethod',
+        'Crm\SubscriptionsModule\Length\Length'
+            => 'Crm\SubscriptionsModule\Models\Length\Length',
+        'Crm\SubscriptionsModule\Length\LengthMethodFactory'
+            => 'Crm\SubscriptionsModule\Models\Length\LengthMethodFactory',
+        'Crm\SubscriptionsModule\Length\LengthMethodInterface'
+            => 'Crm\SubscriptionsModule\Models\Length\LengthMethodInterface',
+
+        'Crm\SubscriptionsModule\PaymentItem\SubscriptionTypePaymentItem'
+            => 'Crm\SubscriptionsModule\Models\PaymentItem\SubscriptionTypePaymentItem',
+
+        'Crm\SubscriptionsModule\Report\UserSourceGroup'
+            => 'Crm\SubscriptionsModule\Models\Report\UserSourceGroup',
+        'Crm\SubscriptionsModule\Report\BaseReport'
+            => 'Crm\SubscriptionsModule\Models\Report\BaseReport',
+        'Crm\SubscriptionsModule\Report\ReportGroup'
+            => 'Crm\SubscriptionsModule\Models\Report\ReportGroup',
+        'Crm\SubscriptionsModule\Report\ReportInterface'
+            => 'Crm\SubscriptionsModule\Models\Report\ReportInterface',
+        'Crm\SubscriptionsModule\Report\ReportTable'
+            => 'Crm\SubscriptionsModule\Models\Report\ReportTable',
+
+        'Crm\SubscriptionsModule\Repository\ContentAccessRepository'
+            => 'Crm\SubscriptionsModule\Repositories\ContentAccessRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionExtensionMethodsRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionExtensionMethodsRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionLengthMethodsRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionLengthMethodsRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionMetaRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionMetaRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionTypeContentAccessRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionTypeContentAccessRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionTypeItemMetaRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionTypeItemMetaRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionTypeItemsRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionTypeItemsRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionTypeNamesRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionTypeNamesRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionTypeTagsRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionTypeTagsRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionTypesMetaRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionTypesMetaRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionTypesRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionTypesRepository',
+        'Crm\SubscriptionsModule\Repository\SubscriptionsRepository'
+            => 'Crm\SubscriptionsModule\Repositories\SubscriptionsRepository',
+
+        'Crm\SubscriptionsModule\Subscription\SubscriptionTypeHelper'
+            => 'Crm\SubscriptionsModule\Models\Subscription\SubscriptionTypeHelper',
+        'Crm\SubscriptionsModule\Subscription\ActualUserSubscription'
+            => 'Crm\SubscriptionsModule\Models\Subscription\ActualUserSubscription',
+        'Crm\SubscriptionsModule\Subscription\StopSubscriptionHandler'
+            => 'Crm\SubscriptionsModule\Models\Subscription\StopSubscriptionHandler',
+        'Crm\SubscriptionsModule\Subscription\SubscriptionEndsSuppressionManager'
+            => 'Crm\SubscriptionsModule\Models\Subscription\SubscriptionEndsSuppressionManager',
+
+        'Crm\SubscriptionsModule\User\SubscriptionsUserDataProvider'
+            => 'Crm\SubscriptionsModule\DataProviders\SubscriptionsUserDataProvider',
+
+        'Crm\SubscriptionsModule\Model\Config'
+            => 'Crm\SubscriptionsModule\Models\Config',
+
+        'Crm\SubscriptionsModule\Populator\SubscriptionsPopulator'
+            => 'Crm\SubscriptionsModule\Populators\SubscriptionsPopulator',
+
+        'Crm\SubscriptionsModule\Tests\SubscriptionsRepositoryAddStartTimeEndTimeTest'
+            => 'Crm\SubscriptionsModule\Tests\Repositories\SubscriptionsRepositoryAddStartTimeEndTimeTest',
+
         // ********************************************************************
         // extensions/upgrades-module
         'Crm\UpgradesModule\Components\FreeRecurrentWidget'
