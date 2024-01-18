@@ -754,6 +754,62 @@ return static function (RectorConfig $rectorConfig) : void {
         // extensions/subscriptions-module
         // ********************************************************************
         // extensions/upgrades-module
+        'Crm\UpgradesModule\Components\FreeRecurrentWidget'
+            => 'Crm\UpgradesModule\Components\FreeRecurrentWidget\FreeRecurrentWidget',
+        'Crm\UpgradesModule\Components\PaidExtendWidget'
+            => 'Crm\UpgradesModule\Components\PaidExtendWidget\PaidExtendWidget',
+        'Crm\UpgradesModule\Components\PaidRecurrentWidget'
+            => 'Crm\UpgradesModule\Components\PaidRecurrentWidget\PaidRecurrentWidget',
+        'Crm\UpgradesModule\Components\ShortWidget'
+            => 'Crm\UpgradesModule\Components\ShortWidget\ShortWidget',
+        'Crm\UpgradesModule\Components\UserPaymentsListingBadge'
+            => 'Crm\UpgradesModule\Components\UserPaymentsListingBadge\UserPaymentsListingBadge',
+
+        'Crm\UpgradesModule\DataProvider\TrackerDataProviderInterface'
+            => 'Crm\UpgradesModule\DataProviders\TrackerDataProviderInterface',
+
+        'Crm\UpgradesModule\Repository\SubscriptionTypeUpgradeSchemasRepository'
+            => 'Crm\UpgradesModule\Repositories\SubscriptionTypeUpgradeSchemasRepository',
+        'Crm\UpgradesModule\Repository\SubscriptionUpgradesRepository'
+            => 'Crm\UpgradesModule\Repositories\SubscriptionUpgradesRepository',
+        'Crm\UpgradesModule\Repository\UpgradeOptionsRepository'
+            => 'Crm\UpgradesModule\Repositories\UpgradeOptionsRepository',
+        'Crm\UpgradesModule\Repository\UpgradeSchemasRepository'
+            => 'Crm\UpgradesModule\Repositories\UpgradeSchemasRepository',
+
+        'Crm\UpgradesModule\Upgrade\SubsequentUpgradeInterface'
+            => 'Crm\UpgradesModule\Models\Upgrade\SubsequentUpgradeInterface',
+        'Crm\UpgradesModule\Upgrade\UpgradeException'
+            => 'Crm\UpgradesModule\Models\Upgrade\UpgradeException',
+        'Crm\UpgradesModule\Upgrade\UpgradeableSubscriptionsInterface'
+            => 'Crm\UpgradesModule\Models\Upgrade\UpgradeableSubscriptionsInterface',
+        'Crm\UpgradesModule\Upgrade\UpgraderFactory'
+            => 'Crm\UpgradesModule\Models\Upgrade\UpgraderFactory',
+        'Crm\UpgradesModule\Upgrade\UpgraderInterface'
+            => 'Crm\UpgradesModule\Models\Upgrade\UpgraderInterface',
+        'Crm\UpgradesModule\Upgrade\UpgraderTrait'
+            => 'Crm\UpgradesModule\Models\Upgrade\UpgraderTrait',
+        'Crm\UpgradesModule\Upgrade\ActualUserSubscriptions'
+            => 'Crm\UpgradesModule\Models\Upgrade\ActualUserSubscriptions',
+        'Crm\UpgradesModule\Upgrade\FreeRecurrentUpgrade'
+            => 'Crm\UpgradesModule\Models\Upgrade\FreeRecurrentUpgrade',
+        'Crm\UpgradesModule\Upgrade\NoDefaultSubscriptionTypeException'
+            => 'Crm\UpgradesModule\Models\Upgrade\NoDefaultSubscriptionTypeException',
+        'Crm\UpgradesModule\Upgrade\PaidExtendUpgrade'
+            => 'Crm\UpgradesModule\Models\Upgrade\PaidExtendUpgrade',
+        'Crm\UpgradesModule\Upgrade\PaidRecurrentUpgrade'
+            => 'Crm\UpgradesModule\Models\Upgrade\PaidRecurrentUpgrade',
+        'Crm\UpgradesModule\Upgrade\ShortUpgrade'
+            => 'Crm\UpgradesModule\Models\Upgrade\ShortUpgrade',
+        'Crm\UpgradesModule\Upgrade\ShortenSubscriptionTrait'
+            => 'Crm\UpgradesModule\Models\Upgrade\ShortenSubscriptionTrait',
+        'Crm\UpgradesModule\Upgrade\SpecificUserSubscriptions'
+            => 'Crm\UpgradesModule\Models\Upgrade\SpecificUserSubscriptions',
+        'Crm\UpgradesModule\Upgrade\SplitSubscriptionTrait'
+            => 'Crm\UpgradesModule\Models\Upgrade\SplitSubscriptionTrait',
+        'Crm\UpgradesModule\Upgrade\AvailableUpgraders'
+            => 'Crm\UpgradesModule\Models\Upgrade\AvailableUpgraders',
+
         // ********************************************************************
         // extensions/users-module
         // ********************************************************************
