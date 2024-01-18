@@ -413,6 +413,275 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/payments-module
+        'Crm\PaymentsModule\Commands\RecurrentPaymentsCardCheck'
+            => 'Crm\PaymentsModule\Commands\RecurrentPaymentsCardCheckCommand',
+
+        'Crm\PaymentsModule\Components\ActualFreeSubscribersStatWidget'
+            => 'Crm\PaymentsModule\Components\ActualFreeSubscribersStatWidget\ActualFreeSubscribersStatWidget',
+        'Crm\PaymentsModule\Components\ActualPaidSubscribersStatWidget'
+            => 'Crm\PaymentsModule\Components\ActualPaidSubscribersStatWidget\ActualPaidSubscribersStatWidget',
+        'Crm\PaymentsModule\Components\AddressWidget'
+            => 'Crm\PaymentsModule\Components\AddressWidget\AddressWidget',
+        'Crm\PaymentsModule\Components\AuthorizationPaymentItemListWidget'
+            => 'Crm\PaymentsModule\Components\AuthorizationPaymentItemListWidget\AuthorizationPaymentItemListWidget',
+        'Crm\PaymentsModule\Components\AvgMonthPaymentWidget'
+            => 'Crm\PaymentsModule\Components\AvgMonthPaymentWidget\AvgMonthPaymentWidget',
+        'Crm\PaymentsModule\Components\AvgSubscriptionPaymentWidget'
+            => 'Crm\PaymentsModule\Components\AvgSubscriptionPaymentWidget\AvgSubscriptionPaymentWidget',
+        'Crm\PaymentsModule\Components\ChangePaymentStatus'
+            => 'Crm\PaymentsModule\Components\ChangePaymentStatus\ChangePaymentStatus',
+        'Crm\PaymentsModule\Components\ChangePaymentStatusFactoryInterface'
+            => 'Crm\PaymentsModule\Components\ChangePaymentStatus\ChangePaymentStatusFactoryInterface',
+        'Crm\PaymentsModule\Components\DeviceUserListingWidget'
+            => 'Crm\PaymentsModule\Components\DeviceUserListingWidget\DeviceUserListingWidget',
+        'Crm\PaymentsModule\Components\DonationPaymentItemsListWidget'
+            => 'Crm\PaymentsModule\Components\DonationPaymentItemsListWidget\DonationPaymentItemsListWidget',
+        'Crm\PaymentsModule\Components\DuplicateRecurrentPayments'
+            => 'Crm\PaymentsModule\Components\DuplicateRecurrentPayments\DuplicateRecurrentPayments',
+        'Crm\PaymentsModule\Components\DuplicateRecurrentPaymentsControlFactoryInterface'
+            => 'Crm\PaymentsModule\Components\DuplicateRecurrentPayments\DuplicateRecurrentPaymentsControlFactoryInterface',
+        'Crm\PaymentsModule\Components\LastPayments'
+            => 'Crm\PaymentsModule\Components\LastPayments\LastPayments',
+        'Crm\PaymentsModule\Components\LastPaymentsControlFactoryInterface'
+            => 'Crm\PaymentsModule\Components\LastPayments\LastPaymentsControlFactoryInterface',
+        'Crm\PaymentsModule\Components\MonthAmountStatWidget'
+            => 'Crm\PaymentsModule\Components\MonthAmountStatWidget\MonthAmountStatWidget',
+        'Crm\PaymentsModule\Components\MonthDonationAmountStatWidget'
+            => 'Crm\PaymentsModule\Components\MonthDonationAmountStatWidget\MonthDonationAmountStatWidget',
+        'Crm\PaymentsModule\Components\MonthToDateAmountStatWidget'
+            => 'Crm\PaymentsModule\Components\MonthToDateAmountStatWidget\MonthToDateAmountStatWidget',
+        'Crm\PaymentsModule\Components\MonthToDateDonationAmountStatWidget'
+            => 'Crm\PaymentsModule\Components\MonthToDateDonationAmountStatWidget\MonthToDateDonationAmountStatWidget',
+        'Crm\PaymentsModule\Components\MyNextRecurrentPayment'
+            => 'Crm\PaymentsModule\Components\MyNextRecurrentPayment\MyNextRecurrentPayment',
+        'Crm\PaymentsModule\Components\PaidSubscriptionsWithoutExtensionEndingWithinPeriodWidget'
+            => 'Crm\PaymentsModule\Components\PaidSubscriptionsWithoutExtensionEndingWithinPeriodWidget\PaidSubscriptionsWithoutExtensionEndingWithinPeriodWidget',
+        'Crm\PaymentsModule\Components\ParsedMailsFailedNotification'
+            => 'Crm\PaymentsModule\Components\ParsedMailsFailedNotification\ParsedMailsFailedNotification',
+        'Crm\PaymentsModule\Components\PaymentItemsListWidget'
+            => 'Crm\PaymentsModule\Components\PaymentItemsListWidget\PaymentItemsListWidget',
+        'Crm\PaymentsModule\Components\RefundPaymentsListWidget'
+            => 'Crm\PaymentsModule\Components\RefundPaymentsListWidget\RefundPaymentsListWidget',
+        'Crm\PaymentsModule\Components\SubscribersWithPaymentWidget'
+            => 'Crm\PaymentsModule\Components\SubscribersWithPaymentWidget\SubscribersWithPaymentWidget',
+        'Crm\PaymentsModule\Components\SubscribersWithPaymentWidgetFactory'
+            => 'Crm\PaymentsModule\Components\SubscribersWithPaymentWidget\SubscribersWithPaymentWidgetFactory',
+        'Crm\PaymentsModule\Components\SubscriptionTypeReports'
+            => 'Crm\PaymentsModule\Components\SubscriptionTypeReports\SubscriptionTypeReports',
+        'Crm\PaymentsModule\Components\SubscriptionsWithActiveUnchargedRecurrentEndingWithinPeriodWidget'
+            => 'Crm\PaymentsModule\Components\SubscriptionsWithActiveUnchargedRecurrentEndingWithinPeriodWidget\SubscriptionsWithActiveUnchargedRecurrentEndingWithinPeriodWidget',
+        'Crm\PaymentsModule\Components\SubscriptionsWithoutExtensionEndingWithinPeriodWidget'
+            => 'Crm\PaymentsModule\Components\SubscriptionsWithoutExtensionEndingWithinPeriodWidget\SubscriptionsWithoutExtensionEndingWithinPeriodWidget',
+        'Crm\PaymentsModule\Components\TodayAmountStatWidget'
+            => 'Crm\PaymentsModule\Components\TodayAmountStatWidget\TodayAmountStatWidget',
+        'Crm\PaymentsModule\Components\TotalAmountStatWidget'
+            => 'Crm\PaymentsModule\Components\TotalAmountStatWidget\TotalAmountStatWidget',
+        'Crm\PaymentsModule\Components\TotalUserPayments'
+            => 'Crm\PaymentsModule\Components\TotalUserPayments\TotalUserPayments',
+        'Crm\PaymentsModule\Components\UserPaymentsListing'
+            => 'Crm\PaymentsModule\Components\UserPaymentsListing\UserPaymentsListing',
+        'Crm\PaymentsModule\Components\ChangePaymentSubscriptionTypeWidget'
+            => 'Crm\PaymentsModule\Components\ChangePaymentSubscriptionTypeWidget\ChangePaymentSubscriptionTypeWidget',
+        'Crm\PaymentsModule\Components\PaymentDonationLabelWidget'
+            => 'Crm\PaymentsModule\Components\PaymentDonationLabelWidget\PaymentDonationLabelWidget',
+        'Crm\PaymentsModule\Components\PaymentToSubscriptionMenu'
+            => 'Crm\PaymentsModule\Components\PaymentToSubscriptionMenu\PaymentToSubscriptionMenu',
+
+        'Crm\PaymentsModule\DataProvider\PaymentItemTypesFilterDataProviderInterface'
+            => 'Crm\PaymentsModule\DataProviders\PaymentItemTypesFilterDataProviderInterface',
+        'Crm\PaymentsModule\DataProvider\PaymentReturnGatewayDataProviderInterface'
+            => 'Crm\PaymentsModule\DataProviders\PaymentReturnGatewayDataProviderInterface',
+        'Crm\PaymentsModule\DataProvider\RetentionAnalysisDataProviderInterface'
+            => 'Crm\PaymentsModule\DataProviders\RetentionAnalysisDataProviderInterface',
+        'Crm\PaymentsModule\DataProvider\AdminFilterFormDataProviderInterface'
+            => 'Crm\PaymentsModule\DataProviders\AdminFilterFormDataProviderInterface',
+        'Crm\PaymentsModule\DataProvider\CanUpdatePaymentItemDataProviderInterface'
+            => 'Crm\PaymentsModule\DataProviders\CanUpdatePaymentItemDataProviderInterface',
+        'Crm\PaymentsModule\DataProvider\PaymentFormDataProviderInterface'
+            => 'Crm\PaymentsModule\DataProviders\PaymentFormDataProviderInterface',
+        'Crm\PaymentsModule\DataProvider\UniversalSearchDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\UniversalSearchDataProvider',
+        'Crm\PaymentsModule\DataProvider\PaymentInvoiceProviderInterface'
+            => 'Crm\PaymentsModule\DataProviders\PaymentInvoiceProviderInterface',
+        'Crm\PaymentsModule\DataProvider\PaymentInvoiceProviderManager'
+            => 'Crm\PaymentsModule\DataProviders\PaymentInvoiceProviderManager',
+        'Crm\PaymentsModule\DataProvider\PaymentFromVariableSymbolDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\PaymentFromVariableSymbolDataProvider',
+        'Crm\PaymentsModule\DataProvider\PaymentItemTypesFilterDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\PaymentItemTypesFilterDataProvider',
+        'Crm\PaymentsModule\DataProvider\SubscriptionFormDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\SubscriptionFormDataProvider',
+        'Crm\PaymentsModule\DataProvider\SubscriptionsWithActiveUnchargedRecurrentEndingWithinPeriodDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\SubscriptionsWithActiveUnchargedRecurrentEndingWithinPeriodDataProvider',
+        'Crm\PaymentsModule\DataProvider\SubscriptionsWithoutExtensionEndingWithinPeriodDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\SubscriptionsWithoutExtensionEndingWithinPeriodDataProvider',
+        'Crm\PaymentsModule\DataProvider\CanDeleteAddressDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\CanDeleteAddressDataProvider',
+        'Crm\PaymentsModule\DataProvider\PaymentsClaimUserDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\PaymentsClaimUserDataProvider',
+        'Crm\PaymentsModule\DataProvider\RecurrentPaymentsClaimUserDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\RecurrentPaymentsClaimUserDataProvider',
+
+        'Crm\PaymentsModule\PaymentStatusChangeException'
+            => 'Crm\PaymentsModule\Events\PaymentStatusChangeException',
+
+        'Crm\PaymentsModule\User\PaymentsUserDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\PaymentsUserDataProvider',
+        'Crm\PaymentsModule\User\RecurrentPaymentsUserDataProvider'
+            => 'Crm\PaymentsModule\DataProviders\RecurrentPaymentsUserDataProvider',
+
+        'Crm\PaymentsModule\Builder\ParsedMailLogsBuilder'
+            => 'Crm\PaymentsModule\Models\Builder\ParsedMailLogsBuilder',
+
+        'Crm\PaymentsModule\Gateways\ProcessResponse'
+            => 'Crm\PaymentsModule\Models\Gateways\ProcessResponse',
+        'Crm\PaymentsModule\Gateways\ReusableCardPaymentInterface'
+            => 'Crm\PaymentsModule\Models\Gateways\ReusableCardPaymentInterface',
+        'Crm\PaymentsModule\Gateways\AuthorizationInterface'
+            => 'Crm\PaymentsModule\Models\Gateways\AuthorizationInterface',
+        'Crm\PaymentsModule\Gateways\BankTransfer'
+            => 'Crm\PaymentsModule\Models\Gateways\BankTransfer',
+        'Crm\PaymentsModule\Gateways\Tatrapay'
+            => 'Crm\PaymentsModule\Models\Gateways\Tatrapay',
+        'Crm\PaymentsModule\Gateways\Cardpay'
+            => 'Crm\PaymentsModule\Models\Gateways\Cardpay',
+        'Crm\PaymentsModule\Gateways\ExternallyChargedRecurrentPaymentInterface'
+            => 'Crm\PaymentsModule\Models\Gateways\ExternallyChargedRecurrentPaymentInterface',
+        'Crm\PaymentsModule\Gateways\Free'
+            => 'Crm\PaymentsModule\Models\Gateways\Free',
+        'Crm\PaymentsModule\Gateways\PaymentInterface'
+            => 'Crm\PaymentsModule\Models\Gateways\PaymentInterface',
+        'Crm\PaymentsModule\Gateways\CardPayAuthorization'
+            => 'Crm\PaymentsModule\Models\Gateways\CardPayAuthorization',
+        'Crm\PaymentsModule\Gateways\Comfortpay'
+            => 'Crm\PaymentsModule\Models\Gateways\Comfortpay',
+        'Crm\PaymentsModule\Gateways\Csob'
+            => 'Crm\PaymentsModule\Models\Gateways\Csob',
+        'Crm\PaymentsModule\Gateways\CsobOneClick'
+            => 'Crm\PaymentsModule\Models\Gateways\CsobOneClick',
+        'Crm\PaymentsModule\Gateways\GatewayAbstract'
+            => 'Crm\PaymentsModule\Models\Gateways\GatewayAbstract',
+        'Crm\PaymentsModule\Gateways\Paypal'
+            => 'Crm\PaymentsModule\Models\Gateways\Paypal',
+        'Crm\PaymentsModule\Gateways\PaypalReference'
+            => 'Crm\PaymentsModule\Models\Gateways\PaypalReference',
+        'Crm\PaymentsModule\Gateways\RecurrentPaymentInterface'
+            => 'Crm\PaymentsModule\Models\Gateways\RecurrentPaymentInterface',
+
+        'Crm\PaymentsModule\MailConfirmation\CidGetterDownloader'
+            => 'Crm\PaymentsModule\Models\MailConfirmation\CidGetterDownloader',
+        'Crm\PaymentsModule\Models\MailDownloader\Email'
+            => 'Crm\PaymentsModule\Models\MailConfirmation\Email',
+        'Crm\PaymentsModule\Models\MailDownloader\EmailInterface'
+            => 'Crm\PaymentsModule\Models\MailConfirmation\EmailInterface',
+        'Crm\PaymentsModule\Models\MailDownloader\ImapMailDownloader'
+            => 'Crm\PaymentsModule\Models\MailConfirmation\ImapMailDownloader',
+        'Crm\PaymentsModule\Models\MailDownloader\MailDownloaderInterface'
+            => 'Crm\PaymentsModule\Models\MailConfirmation\MailDownloaderInterface',
+        'Crm\PaymentsModule\MailConfirmation\MailProcessor'
+            => 'Crm\PaymentsModule\Models\MailConfirmation\MailProcessor',
+        'Crm\PaymentsModule\model\MailDownloader\MailProcessorException'
+            => 'Crm\PaymentsModule\Models\MailConfirmation\MailProcessorException',
+
+        'Crm\PaymentsModule\MailParser\CsobMailParser'
+            => 'Crm\PaymentsModule\Models\MailParser\CsobMailParser',
+        'Crm\PaymentsModule\MailParser\SkCsobMailParser'
+            => 'Crm\PaymentsModule\Models\MailParser\SkCsobMailParser',
+        'Crm\PaymentsModule\MailParser\TatraBankaStatementMailParser'
+            => 'Crm\PaymentsModule\Models\MailParser\TatraBankaStatementMailParser',
+        'Crm\PaymentsModule\MailParser\TatraBankaMailDecryptor'
+            => 'Crm\PaymentsModule\Models\MailParser\TatraBankaMailDecryptor',
+
+        'Crm\PaymentsModule\PaymentItem\AuthorizationPaymentItem'
+            => 'Crm\PaymentsModule\Models\PaymentItem\AuthorizationPaymentItem',
+        'Crm\PaymentsModule\PaymentItem\DonationPaymentItem'
+            => 'Crm\PaymentsModule\Models\PaymentItem\DonationPaymentItem',
+        'Crm\PaymentsModule\PaymentItem\PaymentItemContainer'
+            => 'Crm\PaymentsModule\Models\PaymentItem\PaymentItemContainer',
+        'Crm\PaymentsModule\PaymentItem\PaymentItemContainerException'
+            => 'Crm\PaymentsModule\Models\PaymentItem\PaymentItemContainerException',
+        'Crm\PaymentsModule\PaymentItem\PaymentItemInterface'
+            => 'Crm\PaymentsModule\Models\PaymentItem\PaymentItemInterface',
+        'Crm\PaymentsModule\PaymentItem\PaymentItemTrait'
+            => 'Crm\PaymentsModule\Models\PaymentItem\PaymentItemTrait',
+
+        'Crm\PaymentsModule\Report\NoRecurrentChargeReport'
+            => 'Crm\PaymentsModule\Models\Report\NoRecurrentChargeReport',
+        'Crm\PaymentsModule\Report\PaidNextSubscriptionReport'
+            => 'Crm\PaymentsModule\Models\Report\PaidNextSubscriptionReport',
+        'Crm\PaymentsModule\Report\StoppedOnFirstSubscriptionReport'
+            => 'Crm\PaymentsModule\Models\Report\StoppedOnFirstSubscriptionReport',
+        'Crm\PaymentsModule\Report\TotalPaidSubscriptionsReport'
+            => 'Crm\PaymentsModule\Models\Report\TotalPaidSubscriptionsReport',
+        'Crm\PaymentsModule\Report\TotalRecurrentSubscriptionsReport'
+            => 'Crm\PaymentsModule\Models\Report\TotalRecurrentSubscriptionsReport',
+
+        'Crm\PaymentsModule\Retention\RetentionAnalysis'
+            => 'Crm\PaymentsModule\Models\Retention\RetentionAnalysis',
+
+        'Crm\PaymentsModule\BankTransferPaymentCompleteRedirectResolver'
+            => 'Crm\PaymentsModule\Models\SuccessPageResolver\BankTransferPaymentCompleteRedirectResolver',
+        'Crm\PaymentsModule\Model\PaymentCompleteRedirectManager'
+            => 'Crm\PaymentsModule\Models\SuccessPageResolver\PaymentCompleteRedirectManager',
+        'Crm\PaymentsModule\Model\PaymentCompleteRedirectResolver'
+            => 'Crm\PaymentsModule\Models\SuccessPageResolver\PaymentCompleteRedirectResolver',
+
+        'Crm\PaymentsModule\MailConfirmation\ParsedMailLogsRepository'
+            => 'Crm\PaymentsModule\Repositories\ParsedMailLogsRepository',
+        'Crm\PaymentsModule\Repository\PaymentGatewayMetaRepository'
+            => 'Crm\PaymentsModule\Repositories\PaymentGatewayMetaRepository',
+        'Crm\PaymentsModule\Repository\PaymentGatewaysRepository'
+            => 'Crm\PaymentsModule\Repositories\PaymentGatewaysRepository',
+        'Crm\PaymentsModule\Repository\PaymentItemMetaRepository'
+            => 'Crm\PaymentsModule\Repositories\PaymentItemMetaRepository',
+        'Crm\PaymentsModule\Repository\PaymentMetaRepository'
+            => 'Crm\PaymentsModule\Repositories\PaymentMetaRepository',
+        'Crm\PaymentsModule\Repository\RetentionAnalysisJobsRepository'
+            => 'Crm\PaymentsModule\Repositories\RetentionAnalysisJobsRepository',
+        'Crm\PaymentsModule\Repository\VariableSymbol'
+            => 'Crm\PaymentsModule\Repositories\VariableSymbolRepository',
+        'Crm\PaymentsModule\Repository\PaymentLogsRepository'
+            => 'Crm\PaymentsModule\Repositories\PaymentLogsRepository',
+        'Crm\PaymentsModule\Repository\RecurrentPaymentsRepository'
+            => 'Crm\PaymentsModule\Repositories\RecurrentPaymentsRepository',
+        'Crm\PaymentsModule\Repository\PaymentItemsRepository'
+            => 'Crm\PaymentsModule\Repositories\PaymentItemsRepository',
+        'Crm\PaymentsModule\Repository\PaymentsRepository'
+            => 'Crm\PaymentsModule\Repositories\PaymentsRepository',
+
+        'Crm\PaymentsModule\AdminFilterFormData'
+            => 'Crm\PaymentsModule\Models\AdminFilterFormData',
+        'Crm\PaymentsModule\CannotCheckExpiration'
+            => 'Crm\PaymentsModule\Models\CannotCheckExpiration',
+        'Crm\PaymentsModule\CannotProcessPayment'
+            => 'Crm\PaymentsModule\Models\CannotProcessPayment',
+        'Crm\PaymentsModule\GatewayFactory'
+            => 'Crm\PaymentsModule\Models\GatewayFactory',
+        'Crm\PaymentsModule\GatewayFail'
+            => 'Crm\PaymentsModule\Models\GatewayFail',
+        'Crm\PaymentsModule\PaymentAwareInterface'
+            => 'Crm\PaymentsModule\Models\PaymentAwareInterface',
+        'Crm\PaymentsModule\PaymentProcessor'
+            => 'Crm\PaymentsModule\Models\PaymentProcessor',
+        'Crm\PaymentsModule\PaymentsHistogramFactory'
+            => 'Crm\PaymentsModule\Models\PaymentsHistogramFactory',
+        'Crm\PaymentsModule\RecurrentPaymentFailStop'
+            => 'Crm\PaymentsModule\Models\RecurrentPaymentFailStop',
+        'Crm\PaymentsModule\RecurrentPaymentFailTry'
+            => 'Crm\PaymentsModule\Models\RecurrentPaymentFailTry',
+        'Crm\PaymentsModule\RecurrentPaymentFastCharge'
+            => 'Crm\PaymentsModule\Models\RecurrentPaymentFastCharge',
+        'Crm\PaymentsModule\RecurrentPaymentsProcessor'
+            => 'Crm\PaymentsModule\Models\RecurrentPaymentsProcessor',
+        'Crm\PaymentsModule\RecurrentPaymentsResolver'
+            => 'Crm\PaymentsModule\Models\RecurrentPaymentsResolver',
+        'Crm\PaymentsModule\UnknownPaymentMethodCode'
+            => 'Crm\PaymentsModule\Models\UnknownPaymentMethodCode',
+        'Crm\PaymentsModule\VariableSymbolInterface'
+            => 'Crm\PaymentsModule\Models\VariableSymbolInterface',
+        'Crm\PaymentsModule\VariableSymbolVariant'
+            => 'Crm\PaymentsModule\Models\VariableSymbolVariant',
+
         // ********************************************************************
         // extensions/print-module
         'Crm\PrintModule\Export\ExportCriteria'
