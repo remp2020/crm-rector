@@ -165,6 +165,317 @@ return static function (RectorConfig $rectorConfig) : void {
 
         // ********************************************************************
         // extensions/application-module
+        'Crm\ApplicationModule\ComposerScripts'
+            => 'Crm\ApplicationModule\Application\ComposerScripts',
+        'Crm\ApplicationModule\Core'
+            => 'Crm\ApplicationModule\Application\Core',
+        'Crm\ApplicationModule\EnvironmentConfig'
+            => 'Crm\ApplicationModule\Application\EnvironmentConfig',
+        'Crm\ApplicationModule\PhinxRegistrator'
+            => 'Crm\ApplicationModule\Application\PhinxRegistrator',
+
+        'Crm\ApplicationModule\ApplicationModuleInterface'
+            => 'Crm\ApplicationModule\Application\ApplicationModuleInterface',
+
+        'Crm\ApplicationModule\ApplicationManager'
+            => 'Crm\ApplicationModule\Application\Managers\ApplicationManager',
+        'Crm\ApplicationModule\Models\ApplicationMountManager'
+            => 'Crm\ApplicationModule\Application\Managers\ApplicationMountManager',
+        'Crm\ApplicationModule\AssetsManager'
+            => 'Crm\ApplicationModule\Application\Managers\AssetsManager',
+        'Crm\ApplicationModule\CallbackManagerInterface'
+            => 'Crm\ApplicationModule\Application\Managers\CallbackManagerInterface',
+        'Crm\ApplicationModule\CleanUpManager'
+            => 'Crm\ApplicationModule\Application\Managers\CleanUpManager',
+        'Crm\ApplicationModule\LayoutManager'
+            => 'Crm\ApplicationModule\Application\Managers\LayoutManager',
+        'Crm\ApplicationModule\model\MissingLayoutException'
+            => 'Crm\ApplicationModule\Application\Managers\MissingLayoutException',
+        'Crm\ApplicationModule\ModuleManager'
+            => 'Crm\ApplicationModule\Application\Managers\ModuleManager',
+        'Crm\ApplicationModule\Models\MountManagerConfig'
+            => 'Crm\ApplicationModule\Application\Managers\MountManagerConfig',
+        'Crm\ApplicationModule\SeederManager'
+            => 'Crm\ApplicationModule\Application\Managers\SeederManager',
+
+        'Crm\ApplicationModule\Components\FrontendMenu'
+            => 'Crm\ApplicationModule\Components\FrontendMenu\FrontendMenu',
+        'Crm\ApplicationModule\Components\FrontendMenuFactoryInterface'
+            => 'Crm\ApplicationModule\Components\FrontendMenu\FrontendMenuFactoryInterface',
+
+        'Crm\ApplicationModule\Components\Graphs\GoogleBarGraph'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleBarGraph\GoogleBarGraph',
+        'Crm\ApplicationModule\Components\Graphs\GoogleBarGraphControlFactoryInterface'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleBarGraph\GoogleBarGraphControlFactoryInterface',
+        'Crm\ApplicationModule\Components\Graphs\GoogleBarGraphGroup'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleBarGraphGroup\GoogleBarGraphGroup',
+        'Crm\ApplicationModule\Components\Graphs\GoogleBarGraphGroupControlFactoryInterface'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleBarGraphGroup\GoogleBarGraphGroupControlFactoryInterface',
+        'Crm\ApplicationModule\Components\Graphs\GoogleLineGraph'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleLineGraph\GoogleLineGraph',
+        'Crm\ApplicationModule\Components\Graphs\GoogleLineGraphControlFactoryInterface'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleLineGraph\GoogleLineGraphControlFactoryInterface',
+        'Crm\ApplicationModule\Components\Graphs\GoogleLineGraphGroup'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleLineGraphGroup\GoogleLineGraphGroup',
+        'Crm\ApplicationModule\Components\Graphs\GoogleLineGraphGroupControlFactoryInterface'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleLineGraphGroup\GoogleLineGraphGroupControlFactoryInterface',
+        'Crm\ApplicationModule\Components\Graphs\GoogleSankeyGraphGroup'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleSankeyGraphGroup\GoogleSankeyGraphGroup',
+        'Crm\ApplicationModule\Components\Graphs\GoogleSankeyGraphGroupControlFactoryInterface'
+            => 'Crm\ApplicationModule\Components\Graphs\GoogleSankeyGraphGroup\GoogleSankeyGraphGroupControlFactoryInterface',
+        'Crm\ApplicationModule\Components\Graphs\InlineBarGraph'
+            => 'Crm\ApplicationModule\Components\Graphs\InlineBarGraph\InlineBarGraph',
+        'Crm\ApplicationModule\Components\Graphs\InlineBarGraphControlFactoryInterface'
+            => 'Crm\ApplicationModule\Components\Graphs\InlineBarGraph\InlineBarGraphControlFactoryInterface',
+        'Crm\ApplicationModule\Components\Graphs\SmallBarGraph'
+            => 'Crm\ApplicationModule\Components\Graphs\SmallBarGraph\SmallBarGraph',
+        'Crm\ApplicationModule\Components\Graphs\SmallBarGraphControlFactoryInterface'
+            => 'Crm\ApplicationModule\Components\Graphs\SmallBarGraph\SmallBarGraphControlFactoryInterface',
+
+        'Crm\ApplicationModule\Components\PreviousNextPaginator'
+            => 'Crm\ApplicationModule\Components\PreviousNextPaginator\PreviousNextPaginator',
+
+        'Crm\ApplicationModule\Components\VisualPaginator'
+            => 'Crm\ApplicationModule\Components\VisualPaginator\VisualPaginator',
+
+        'Crm\ApplicationModule\Components\SimpleWidget'
+            => 'Crm\ApplicationModule\Components\Widgets\SimpleWidget\SimpleWidget',
+        'Crm\ApplicationModule\Components\SimpleWidgetFactoryInterface'
+            => 'Crm\ApplicationModule\Components\Widgets\SimpleWidget\SimpleWidgetFactoryInterface',
+        'Crm\ApplicationModule\Components\SingleStatWidget'
+            => 'Crm\ApplicationModule\Components\Widgets\SingleStatWidget\SingleStatWidget',
+        'Crm\ApplicationModule\Components\SingleStatWidgetFactoryInterface'
+            => 'Crm\ApplicationModule\Components\Widgets\SingleStatWidget\SingleStatWidgetFactoryInterface',
+
+        'Crm\ApplicationModule\FormFactoryDefaultsTrait'
+            => 'Crm\ApplicationModule\Forms\FormFactoryDefaultsTrait',
+
+        'Crm\ApplicationModule\LogRedact'
+            => 'Crm\ApplicationModule\Models\LogRedact',
+        'Crm\ApplicationModule\NowTrait'
+            => 'Crm\ApplicationModule\Models\NowTrait',
+        'Crm\ApplicationModule\Request'
+            => 'Crm\ApplicationModule\Models\Request',
+        'Crm\ApplicationModule\ResettableInterface'
+            => 'Crm\ApplicationModule\Models\ResettableInterface',
+
+        'Crm\ApplicationModule\Access\AccessManager'
+            => 'Crm\ApplicationModule\Models\Access\AccessManager',
+        'Crm\ApplicationModule\Access\DummyAccessProvider'
+            => 'Crm\ApplicationModule\Models\Access\DummyAccessProvider',
+        'Crm\ApplicationModule\Access\ProviderInterface'
+            => 'Crm\ApplicationModule\Models\Access\ProviderInterface',
+        'Crm\ApplicationModule\Access\UnknownAccessException'
+            => 'Crm\ApplicationModule\Models\Access\UnknownAccessException',
+
+        'Crm\ApplicationModule\Authenticator\AuthenticatorInterface'
+            => 'Crm\ApplicationModule\Models\Authenticator\AuthenticatorInterface',
+        'Crm\ApplicationModule\Authenticator\AuthenticatorManager'
+            => 'Crm\ApplicationModule\Models\Authenticator\AuthenticatorManager',
+        'Crm\ApplicationModule\Authenticator\AuthenticatorManagerInterface'
+            => 'Crm\ApplicationModule\Models\Authenticator\AuthenticatorManagerInterface',
+        'Crm\ApplicationModule\Authenticator\BaseAuthenticator'
+            => 'Crm\ApplicationModule\Models\Authenticator\BaseAuthenticator',
+
+        'Crm\ApplicationModule\Commands\CommandsContainer'
+            => 'Crm\ApplicationModule\Application\CommandsContainer',
+        'Crm\ApplicationModule\Commands\CommandsContainerInterface'
+            => 'Crm\ApplicationModule\Application\CommandsContainerInterface',
+
+        'Crm\ApplicationModule\Config\ApplicationConfig'
+            => 'Crm\ApplicationModule\Models\Config\ApplicationConfig',
+        'Crm\ApplicationModule\Config\ConfigExtension'
+            => 'Crm\ApplicationModule\Models\Config\ConfigExtension',
+        'Crm\ApplicationModule\Config\ConfigsCache'
+            => 'Crm\ApplicationModule\Models\Config\ConfigsCache',
+        'Crm\ApplicationModule\Config\LocalConfig'
+            => 'Crm\ApplicationModule\Models\Config\LocalConfig',
+
+        'Crm\ApplicationModule\Criteria\CriteriaParam'
+            => 'Crm\ApplicationModule\Models\Criteria\CriteriaParam',
+        'Crm\ApplicationModule\Criteria\CriteriaStorage'
+            => 'Crm\ApplicationModule\Models\Criteria\CriteriaStorage',
+        'Crm\ApplicationModule\Criteria\ScenarioConditionModelInterface'
+            => 'Crm\ApplicationModule\Models\Criteria\ScenarioConditionModelInterface',
+        'Crm\ApplicationModule\Scenarios\ScenarioCriteriaParamInterface'
+            => 'Crm\ApplicationModule\Models\Criteria\ScenarioCriteriaParamInterface',
+        'Crm\ApplicationModule\Criteria\ScenarioParams\BooleanParam'
+            => 'Crm\ApplicationModule\Models\Criteria\ScenarioParams\BooleanParam',
+        'Crm\ApplicationModule\Criteria\ScenarioParams\NumberParam'
+            => 'Crm\ApplicationModule\Models\Criteria\ScenarioParams\NumberParam',
+        'Crm\ApplicationModule\Criteria\ScenarioParams\StringLabeledArrayParam'
+            => 'Crm\ApplicationModule\Models\Criteria\ScenarioParams\StringLabeledArrayParam',
+        'Crm\ApplicationModule\Criteria\ScenarioParams\TimeframeParam'
+            => 'Crm\ApplicationModule\Models\Criteria\ScenarioParams\TimeframeParam',
+        'Crm\ApplicationModule\Criteria\ScenariosCriteriaInterface'
+            => 'Crm\ApplicationModule\Models\Criteria\ScenariosCriteriaInterface',
+        'Crm\ApplicationModule\Criteria\ScenariosCriteriaStorage'
+            => 'Crm\ApplicationModule\Models\Criteria\ScenariosCriteriaStorage',
+        'Crm\ApplicationModule\Criteria\CriteriaInterface'
+            => 'Crm\ApplicationModule\Models\Criteria\CriteriaInterface',
+
+        'Crm\ApplicationModule\ActiveRow'
+            => 'Crm\ApplicationModule\Models\Database\ActiveRow',
+        'Crm\ApplicationModule\ActiveRowFactory'
+            => 'Crm\ApplicationModule\Models\Database\ActiveRowFactory',
+        'Crm\ApplicationModule\DateFieldsProcessorTrait'
+            => 'Crm\ApplicationModule\Models\Database\DateFieldsProcessorTrait',
+        'Remp\MailerModule\Repositories\NewTableDataMigrationTrait'
+            => 'Crm\ApplicationModule\Models\Database\NewTableDataMigrationTrait',
+        'Crm\ApplicationModule\Repository\ReplicaConfig'
+            => 'Crm\ApplicationModule\Models\Database\ReplicaConfig',
+        'Crm\ApplicationModule\Repository\ReplicaManager'
+            => 'Crm\ApplicationModule\Models\Database\ReplicaManager',
+        'Crm\ApplicationModule\Repository\ReplicaTrait'
+            => 'Crm\ApplicationModule\Models\Database\ReplicaTrait',
+        'Crm\ApplicationModule\Repository'
+            => 'Crm\ApplicationModule\Models\Database\Repository',
+        'Crm\ApplicationModule\Repository\RetentionData'
+            => 'Crm\ApplicationModule\Models\Database\RetentionData',
+        'Crm\ApplicationModule\Selection'
+            => 'Crm\ApplicationModule\Models\Database\Selection',
+        'Crm\ApplicationModule\Models\Traits\SlugColumnException'
+            => 'Crm\ApplicationModule\Models\Database\SlugColumnException',
+        'Crm\ApplicationModule\Models\Repository\SlugColumnTrait'
+            => 'Crm\ApplicationModule\Models\Database\SlugColumnTrait',
+
+        'Crm\ApplicationModule\DataProvider\DataProviderException'
+            => 'Crm\ApplicationModule\Models\DataProvider\DataProviderException',
+        'Crm\ApplicationModule\DataProvider\DataProviderInterface'
+            => 'Crm\ApplicationModule\Models\DataProvider\DataProviderInterface',
+        'Crm\ApplicationModule\DataProvider\DataProviderManager'
+            => 'Crm\ApplicationModule\Models\DataProvider\DataProviderManager',
+        'Crm\ApplicationModule\DataProvider\FrontendMenuDataProviderInterface'
+            => 'Crm\ApplicationModule\Models\DataProvider\FrontendMenuDataProviderInterface',
+
+        'Crm\ApplicationModule\Event\BeforeEvent'
+            => 'Crm\ApplicationModule\Models\Event\BeforeEvent',
+        'Crm\ApplicationModule\Event\Event'
+            => 'Crm\ApplicationModule\Models\Event\Event',
+        'Crm\ApplicationModule\Event\EventGeneratorInterface'
+            => 'Crm\ApplicationModule\Models\Event\EventGeneratorInterface',
+        'Crm\ApplicationModule\Event\EventManagerInterface'
+            => 'Crm\ApplicationModule\Models\Event\EventManagerInterface',
+        'Crm\ApplicationModule\Event\EventsStorage'
+            => 'Crm\ApplicationModule\Models\Event\EventsStorage',
+        'Crm\ApplicationModule\Event\LazyEventEmitter'
+            => 'Crm\ApplicationModule\Models\Event\LazyEventEmitter',
+        'Crm\ApplicationModule\Event\RedisEventManager'
+            => 'Crm\ApplicationModule\Models\Event\RedisEventManager',
+
+        'Crm\ApplicationModule\ExcelFactory'
+            => 'Crm\ApplicationModule\Models\Exports\ExcelFactory',
+
+        'Crm\ApplicationModule\Graphs\Criteria'
+            => 'Crm\ApplicationModule\Models\Graphs\Criteria',
+        'Crm\ApplicationModule\Graphs\GraphData'
+            => 'Crm\ApplicationModule\Models\Graphs\GraphData',
+        'Crm\ApplicationModule\Graphs\GraphDataItem'
+            => 'Crm\ApplicationModule\Models\Graphs\GraphDataItem',
+        'Crm\ApplicationModule\Graphs\ScaleFactory'
+            => 'Crm\ApplicationModule\Models\Graphs\ScaleFactory',
+
+        'Crm\ApplicationModule\Graphs\Scale\DayScale'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\DayScale',
+        'Crm\ApplicationModule\Graphs\Scale\MonthScale'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\MonthScale',
+        'Crm\ApplicationModule\Graphs\Scale\ScaleBase'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\ScaleBase',
+        'Crm\ApplicationModule\Graphs\Scale\ScaleInterface'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\ScaleInterface',
+        'Crm\ApplicationModule\Graphs\Scale\WeekScale'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\WeekScale',
+
+        'Crm\ApplicationModule\Graphs\Scale\Mysql\DayScale'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\Mysql\DayScale',
+        'Crm\ApplicationModule\Graphs\Scale\Mysql\MonthScale'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\Mysql\MonthScale',
+        'Crm\ApplicationModule\Graphs\Scale\Mysql\RangeScaleFactory'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\Mysql\RangeScaleFactory',
+        'Crm\ApplicationModule\Graphs\Scale\Mysql\WeekScale'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\Mysql\WeekScale',
+        'Crm\ApplicationModule\Graphs\Scale\Mysql\YearScale'
+            => 'Crm\ApplicationModule\Models\Graphs\Scale\Mysql\YearScale',
+
+        'Crm\ApplicationModule\Menu\MenuContainer'
+            => 'Crm\ApplicationModule\Models\Menu\MenuContainer',
+        'Crm\ApplicationModule\Menu\MenuContainerInterface'
+            => 'Crm\ApplicationModule\Models\Menu\MenuContainerInterface',
+        'Crm\ApplicationModule\Menu\MenuItem'
+            => 'Crm\ApplicationModule\Models\Menu\MenuItem',
+        'Crm\ApplicationModule\Menu\MenuItemInterface'
+            => 'Crm\ApplicationModule\Models\Menu\MenuItemInterface',
+
+        'Crm\ApplicationModule\RedisClientFactory'
+            => 'Crm\ApplicationModule\Models\Redis\RedisClientFactory',
+        'Crm\ApplicationModule\RedisClientTrait'
+            => 'Crm\ApplicationModule\Models\Redis\RedisClientTrait',
+        'Crm\ApplicationModule\RedisClientTraitException'
+            => 'Crm\ApplicationModule\Models\Redis\RedisClientTraitException',
+
+        'Crm\ApplicationModule\Snippet\Control\Snippet'
+            => 'Crm\ApplicationModule\Models\Snippet\Control\Snippet',
+        'Crm\ApplicationModule\Snippet\Control\SnippetFactory'
+            => 'Crm\ApplicationModule\Models\Snippet\Control\SnippetFactory',
+        'Crm\ApplicationModule\Snippet\SnippetRenderer'
+            => 'Crm\ApplicationModule\Models\Snippet\SnippetRenderer',
+
+        'Crm\ApplicationModule\User\DeleteUserData'
+            => 'Crm\ApplicationModule\Models\User\DeleteUserData',
+        'Crm\ApplicationModule\User\DownloadUserData'
+            => 'Crm\ApplicationModule\Models\User\DownloadUserData',
+        'Crm\ApplicationModule\User\RedisUserDataStorage'
+            => 'Crm\ApplicationModule\Models\User\RedisUserDataStorage',
+        'Crm\ApplicationModule\User\UserDataProviderInterface'
+            => 'Crm\ApplicationModule\Models\User\UserDataProviderInterface',
+        'Crm\ApplicationModule\User\UserDataRegistrator'
+            => 'Crm\ApplicationModule\Models\User\UserDataRegistrator',
+        'Crm\ApplicationModule\User\UserDataStorageInterface'
+            => 'Crm\ApplicationModule\Models\User\UserDataStorageInterface',
+
+        'Crm\ApplicationModule\Widget\LazyWidgetManager'
+            => 'Crm\ApplicationModule\Models\Widget\LazyWidgetManager',
+        'Crm\ApplicationModule\Widget\LazyWidgetManagerInterface'
+            => 'Crm\ApplicationModule\Models\Widget\LazyWidgetManagerInterface',
+        'Crm\ApplicationModule\Widget\WidgetFactoryInterface'
+            => 'Crm\ApplicationModule\Models\Widget\WidgetFactoryInterface',
+        'Crm\ApplicationModule\Widget\WidgetInterface'
+            => 'Crm\ApplicationModule\Models\Widget\WidgetInterface',
+        'Crm\ApplicationModule\Widget\WidgetManager'
+            => 'Crm\ApplicationModule\Models\Widget\WidgetManager',
+        'Crm\ApplicationModule\Widget\WidgetManagerInterface'
+            => 'Crm\ApplicationModule\Models\Widget\WidgetManagerInterface',
+        'Crm\ApplicationModule\Widget\BaseLazyWidget'
+            => 'Crm\ApplicationModule\Models\Widget\BaseLazyWidget',
+        'Crm\ApplicationModule\Widget\BaseWidget'
+            => 'Crm\ApplicationModule\Models\Widget\BaseWidget',
+
+        'Crm\ApplicationModule\Populator\AbstractPopulator'
+            => 'Crm\ApplicationModule\Populators\AbstractPopulator',
+
+        'Crm\ApplicationModule\Repository\AuditLogRepository'
+            => 'Crm\ApplicationModule\Repositories\AuditLogRepository',
+        'Crm\ApplicationModule\Cache\CacheRepository'
+            => 'Crm\ApplicationModule\Repositories\CacheRepository',
+        'Crm\ApplicationModule\Config\Repository\ConfigCategoriesRepository'
+            => 'Crm\ApplicationModule\Repositories\ConfigCategoriesRepository',
+        'Crm\ApplicationModule\Config\Repository\ConfigsRepository'
+            => 'Crm\ApplicationModule\Repositories\ConfigsRepository',
+        'Crm\ApplicationModule\Repository\HermesTasksRepository'
+            => 'Crm\ApplicationModule\Repositories\HermesTasksRepository',
+        'Crm\ApplicationModule\Snippet\Repository\SnippetsRepository'
+            => 'Crm\ApplicationModule\Repositories\SnippetsRepository',
+        'Crm\ApplicationModule\Models\Measurements\Repository\MeasurementGroupsRepository'
+            => 'Crm\ApplicationModule\Repositories\MeasurementGroupsRepository',
+        'Crm\ApplicationModule\Models\Measurements\Repository\MeasurementGroupValuesRepository'
+            => 'Crm\ApplicationModule\Repositories\MeasurementGroupValuesRepository',
+        'Crm\ApplicationModule\Models\Measurements\Repository\MeasurementsRepository'
+            => 'Crm\ApplicationModule\Repositories\MeasurementsRepository',
+        'Crm\ApplicationModule\Models\Measurements\Repository\MeasurementValuesRepository'
+            => 'Crm\ApplicationModule\Repositories\MeasurementValuesRepository',
+
+        'Crm\ApplicationModule\Models\Config\Tests\ApplicationConfigTest'
+            => 'Crm\ApplicationModule\Tests\Models\Config\ApplicationConfigTest',
 
         // ********************************************************************
         // extensions/coupon-module
