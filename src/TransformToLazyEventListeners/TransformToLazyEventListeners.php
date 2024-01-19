@@ -2,7 +2,7 @@
 
 namespace Crm\Utils\Rector\TransformToLazyEventListeners;
 
-use Crm\ApplicationModule\Event\LazyEventEmitter;
+use Crm\ApplicationModule\Models\Event\LazyEventEmitter;
 use PhpParser\Node;
 use PhpParser\Node\Expr\MethodCall;
 use PhpParser\Node\Identifier;
@@ -35,7 +35,7 @@ class TransformToLazyEventListeners extends AbstractRector
                     ',
                     // code after
                     '
-                    public function registerLazyEventHandlers(\Crm\ApplicationModule\Event\LazyEventEmitter $emitter)
+                    public function registerLazyEventHandlers(\Crm\ApplicationModule\Models\Event\LazyEventEmitter $emitter)
                     {
                         $emitter->addListener(
                             \Crm\UsersModule\Events\UserRegisteredEvent::class,
