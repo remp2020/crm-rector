@@ -1809,6 +1809,23 @@ return static function (RectorConfig $rectorConfig) : void {
             => 'Crm\VubEplatbyModule\Models\MailParser\VubMailParser',
 
         // ********************************************************************
+        // extensions/wallet-pay-module
+        'Crm\WalletPayModule\Model\ApplePayResult'
+            => 'Crm\WalletPayModule\Models\ApplePayResult',
+        'Crm\WalletPayModule\Model\ApplePayWalletInterface'
+            => 'Crm\WalletPayModule\Models\ApplePayWalletInterface',
+        'Crm\WalletPayModule\Model\Constants'
+            => 'Crm\WalletPayModule\Models\Constants',
+        'Crm\WalletPayModule\Model\GooglePayResult'
+            => 'Crm\WalletPayModule\Models\GooglePayResult',
+        'Crm\WalletPayModule\Model\GooglePayWalletInterface'
+            => 'Crm\WalletPayModule\Models\GooglePayWalletInterface',
+        'Crm\WalletPayModule\Model\TatraBankaApplePayWallet'
+            => 'Crm\WalletPayModule\Models\TatraBankaApplePayWallet',
+        'Crm\WalletPayModule\Model\TatraBankaGooglePayWallet'
+            => 'Crm\WalletPayModule\Models\TatraBankaGooglePayWallet',
+
+        // ********************************************************************
         // extensions/wordpress-module
         'Crm\WordpressModule\Model\ApiClient'
             => 'Crm\WordpressModule\Models\ApiClient',
