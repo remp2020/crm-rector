@@ -54,7 +54,6 @@ class ReplaceNetteFormRule extends AbstractRector
             if ($node->getAttribute('originalName')->name !== 'Form') {
                 return new Name\FullyQualified('Crm\ApplicationModule\UI\Form');
             }
-
         }
 
         return null;
