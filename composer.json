@@ -8,8 +8,7 @@
     },
     "require": {
         "php": "^8.1",
-        "rector/rector": "^2.0",
-        "symplify/better-php-doc-parser": ""
+        "rector/rector": "^2.0"
     },
     "license": "MIT",
     "autoload": {
