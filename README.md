@@ -50,6 +50,7 @@ return static function (RectorConfig $rectorConfig): void {
 
     // run single rule if you don't want to run whole set
     // $rectorConfig->rule(\Crm\Utils\Rector\UpgradeToCrm4\InputParamChangeRector::class);
+    // $rectorConfig->rule(\Crm\Utils\Rector\UpgradeToCrm4\RemoveParamsProcessorRector::class);
 
     // automatically import/remove namespaces after all rules are applied
     $rectorConfig->importNames();
@@ -97,9 +98,23 @@ or individual rules.
 
 #### Rules
 
-##### Transforms `Crm\ApiModule\Models\Params\InputParam` to specific `*InputParam` objects
+##### Transform `Crm\ApiModule\Models\Params\InputParam` to specific `*InputParam` objects
 
-This rule ([`\Crm\Utils\Rector\UpgradeToCrm4\InputParamChangeRector`](src/UpgradeToCrm4/InputParamChangeRector.php)) changes `\Crm\ApiModule\Models\Params\InputParam` to specific `InputParam` object from tomaj/nette-api library. See what will be changed in `getRuleDefinition()` method in [`\Crm\Utils\Rector\UpgradeToCrm4\InputParamChangeRector`](src/UpgradeToCrm4/InputParamChangeRector.php)
+This rule ([`\Crm\Utils\Rector\UpgradeToCrm4\InputParamChangeRector`](src/UpgradeToCrm4/InputParamChangeRector.php)) changes `\Crm\ApiModule\Models\Params\InputParam` to specific `InputParam` object from tomaj/nette-api library.
+
+See what will be changed in `getRuleDefinition()` method in [`\Crm\Utils\Rector\UpgradeToCrm4\InputParamChangeRector`](src/UpgradeToCrm4/InputParamChangeRector.php)
+
+##### Remove calls of deprecated methods from ParamsProcessor
+
+This rule ([`\Crm\Utils\Rector\UpgradeToCrm4\RemoveParamsProcessorRector`](src/UpgradeToCrm4/RemoveParamsProcessorRector.php)) will remove useless calls of `ParamsProcessor`. Some of these methods were removed (`hasError()`). And `getErrors()` or `getValues()` (loading API parameters from `ParamsProcessor`) are not needed anymore. API runner handles errors before loading handler and provides validated parameters to `handle()` method.
+
+> WARNING: This Rector rule does crude work. You still need to go through all changes and fix your API handlers (if you worked or need to work with errors).
+>
+> If you use `ApiParamsValidatorInterface`, do not run this Rector rule. It doesn't understand this context.
+
+See what will be changed in `getRuleDefinition()` method in [`\Crm\Utils\Rector\UpgradeToCrm4\RemoveParamsProcessorRector`](src/UpgradeToCrm4/RemoveParamsProcessorRector.php)
+
+---
 
 ### Transform Nette annotations to attributes
 

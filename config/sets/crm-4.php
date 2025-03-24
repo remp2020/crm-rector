@@ -5,4 +5,5 @@ use Rector\Config\RectorConfig;
 
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->rule(\Crm\Utils\Rector\UpgradeToCrm4\InputParamChangeRector::class);
+    $rectorConfig->rule(\Crm\Utils\Rector\UpgradeToCrm4\RemoveParamsProcessorRector::class);
 };
