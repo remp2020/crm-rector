@@ -41,22 +41,20 @@ return static function (RectorConfig $rectorConfig): void {
     // paths to refactor
     $rectorConfig->paths([
         __DIR__ . '/app/custom-modules', // path to custom modules
-         __DIR__ . '/composer.json', // root composer -> updates REMP CRM packages automatically
     ]);
 
-    // optional settings to automatically import namespaces in changed files
-    $rectorConfig->importNames();
-    $rectorConfig->disableImportShortClasses();
-
-    // set with CRM 1.0 changes; check README for list of sets
+    // set with CRM v3 and CRM v4 changes; check README for details
     $rectorConfig->sets([
-        CrmSetList::CRM_3_0_PSR4,
-        CrmSetList::NETTE_ANNOTATIONS_TO_ATTRIBUTES,
+        CrmSetList::CRM_4,
     ]);
 
-    // set service if you want to run individual rule; check README for list of rules
-    // $services = $rectorConfig->services();
-    // $services->set(\Crm\Utils\Rector\UpgradeToCrm1\ApiHandlerJsonResponseRector::class);
+    // run single rule if you don't want to run whole set
+    // $rectorConfig->rule(\Crm\Utils\Rector\UpgradeToCrm4\InputParamChangeRector::class);
+
+    // automatically import/remove namespaces after all rules are applied
+    $rectorConfig->importNames();
+    $rectorConfig->importShortClasses(false);
+    $rectorConfig->removeUnusedImports();
 };
 ```
 
@@ -77,6 +75,31 @@ vendor/bin/rector process
 _Use `vendor/bin/rector --help` for help. Notable flags are `-vvv` for verbose messages, `--clear-cache` and `--xdebug` if you need to debug rector rules._
 
 ## Sets & rules
+
+### Upgrade CRM v3 to CRM v4
+
+#### Set
+
+Use set `CrmSetList::CRM_4`:
+
+```php
+$rectorConfig->sets([\Crm\Utils\Rector\Set\CrmSetList::CRM_4]);
+
+// removes import of Crm\ApiModule\Models\Params\InputParam
+$rectorConfig->removeUnusedImports();
+
+// imports new *InputParam classes
+$rectorConfig->importNames();
+
+```
+
+or individual rules.
+
+#### Rules
+
+##### Transforms `Crm\ApiModule\Models\Params\InputParam` to specific `*InputParam` objects
+
+This rule ([`\Crm\Utils\Rector\UpgradeToCrm4\InputParamChangeRector`](src/UpgradeToCrm4/InputParamChangeRector.php)) changes `\Crm\ApiModule\Models\Params\InputParam` to specific `InputParam` object from tomaj/nette-api library. See what will be changed in `getRuleDefinition()` method in [`\Crm\Utils\Rector\UpgradeToCrm4\InputParamChangeRector`](src/UpgradeToCrm4/InputParamChangeRector.php)
 
 ### Transform Nette annotations to attributes
 

@@ -14,4 +14,9 @@ final class CrmSetList
      * @var string
      */
     public const CRM_3_0_PSR4 = __DIR__ . '/../../config/sets/crm-3-0-psr4.php';
+
+    /**
+     * @var string
+     */
+    public const CRM_4 = __DIR__ . '/../../config/sets/crm-4.php';
 }
