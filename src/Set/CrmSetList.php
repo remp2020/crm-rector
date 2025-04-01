@@ -24,4 +24,9 @@ final class CrmSetList
      * @var string
      */
     public const CRM_4_LAZY_WIDGET_MANAGER = __DIR__ . '/../../config/sets/crm-4-lazy-widget-manager.php';
+
+    /**
+     * @var string
+     */
+    public const CRM_4_ENUMS = __DIR__ . '/../../config/sets/crm-4-enums.php';
 }
