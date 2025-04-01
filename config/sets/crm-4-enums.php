@@ -89,4 +89,23 @@ return static function (RectorConfig $rectorConfig): void {
             )
         ]);
     }
+
+    // **********************************************************************
+    // Replace AddressChangeRequestsRepository constants with AddressChangeRequestStatusEnum enums
+    $addressChangeRequestStatuses = [
+        'STATUS_NEW' => 'New',
+        'STATUS_ACCEPTED' => 'Accepted',
+        'STATUS_REJECTED' => 'Rejected',
+    ];
+
+    foreach ($addressChangeRequestStatuses as $oldACRStatus => $newACRStatus) {
+        $rectorConfig->ruleWithConfiguration(\Crm\Utils\Rector\UpgradeToCrm4\ReplaceConstWithEnumRector::class, [
+            new \Crm\Utils\Rector\RectorHelpers\ValueObject\ReplaceClassConstByClassEnumFetch(
+                'Crm\UsersModule\Repositories\AddressChangeRequestsRepository',
+                $oldACRStatus,
+                'Crm\UsersModule\Models\AddressChangeRequest\AddressChangeRequestStatusEnum',
+                $newACRStatus,
+            )
+        ]);
+    }
 };
