@@ -39,4 +39,28 @@ return static function (RectorConfig $rectorConfig): void {
             )
         ]);
     }
+
+
+    // **********************************************************************
+    // Replace RecurrentPaymentsRepository constants with RecurrentPaymentStateEnum enums
+    $recurrentPaymentStates = [
+        'STATE_USER_STOP' => 'UserStop',
+        'STATE_ADMIN_STOP' => 'AdminStop',
+        'STATE_ACTIVE' => 'Active',
+        'STATE_PENDING' => 'Pending',
+        'STATE_CHARGED' => 'Charged',
+        'STATE_CHARGE_FAILED' => 'ChargeFailed',
+        'STATE_SYSTEM_STOP' => 'SystemStop',
+    ];
+
+    foreach ($recurrentPaymentStates as $oldRPState => $newRPState) {
+        $rectorConfig->ruleWithConfiguration(\Crm\Utils\Rector\UpgradeToCrm4\ReplaceConstWithEnumRector::class, [
+            new \Crm\Utils\Rector\RectorHelpers\ValueObject\ReplaceClassConstByClassEnumFetch(
+                'Crm\PaymentsModule\Repositories\RecurrentPaymentsRepository',
+                $oldRPState,
+                'Crm\PaymentsModule\Models\RecurrentPayment\RecurrentPaymentStateEnum',
+                $newRPState,
+            )
+        ]);
+    }
 };
