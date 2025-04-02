@@ -10,5 +10,6 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->sets([
         \Crm\Utils\Rector\Set\CrmSetList::CRM_4_LAZY_WIDGET_MANAGER,
         \Crm\Utils\Rector\Set\CrmSetList::CRM_4_ENUMS,
+        \Crm\Utils\Rector\Set\CrmSetList::CRM_4_MISC,
     ]);
 };

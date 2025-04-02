@@ -29,4 +29,9 @@ final class CrmSetList
      * @var string
      */
     public const CRM_4_ENUMS = __DIR__ . '/../../config/sets/crm-4-enums.php';
+
+    /**
+     * @var string
+     */
+    public const CRM_4_MISC = __DIR__ . '/../../config/sets/crm-4-misc.php';
 }
