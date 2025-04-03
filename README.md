@@ -94,7 +94,30 @@ $rectorConfig->importNames();
 
 ```
 
-or individual rules.
+or individual subsets / rules.
+
+#### Subsets
+
+##### Replace deprecated `BaseWidget` and `WidgetManager`
+
+This set (`CrmSetList::CRM_4_LAZY_WIDGET_MANAGER`) replaces deprecated classes `BaseWidget` and `WidgetManager` with `BaseLazyWidget` and `LazyWidgetManager`. They were deprecated since
+version [2.1.0](https://github.com/remp2020/crm-application-module/releases/tag/2.1.0),
+commit [remp/crm-application-module@43d9c19f37](https://github.com/remp2020/crm-application-module/commit/43d9c19f37a0fa49e98bf165d5b60783f66f8225)
+
+##### Replace `PaymentsRepository` and `RecurrentPaymentsRepository` constants with enums
+
+This set (`CrmSetList::CRM_4_ENUMS`) handles renames of few enums where class name didn't contain context:
+
+- `Crm\PaymentsModule\Models\ParsedMailLog\StateEnum` renamed to `ParsedMailLogStateEnum`,
+- `Crm\PaymentsModule\Models\RecurrentPayment\StateEnum` renamed to `RecurrentPaymentStateEnum`,
+- `Crm\UsersModule\Models\AddressChangeRequest\StatusEnum` renamed to `AddressChangeRequestStatusEnum`.
+
+And replaces all deprecated constants with enums:
+
+- `PaymentsRepository` constants replaced by `PaymentStatusEnum` enums,
+- `RecurrentPaymentsRepository` constants replaced by `RecurrentPaymentStateEnum` enums,
+- `ParsedMailLogsRepository` constants replaced by `ParsedMailLogStateEnum` enums,
+- `AddressChangeRequestsRepository` constants replaced by `AddressChangeRequestStatusEnum` enums.
 
 #### Rules
 
